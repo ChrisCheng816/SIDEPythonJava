@@ -1,0 +1,10 @@
+LLM judge metric
+Model: openai/gpt-oss-20b
+Rows: 500
+LLM_JUDGE_score average: 1.102000
+LLM_JUDGE_content_adequacy average: 1.102000
+LLM_JUDGE_conciseness average: 1.102000
+LLM_JUDGE_fluency average: 1.102000
+
+Spearman correlation with SIDE
+SIDE_score vs LLM_JUDGE_score: 0.323652

@@ -1,0 +1,7 @@
+LLM judge metric
+Model: openai/gpt-oss-20b
+Rows: 500
+LLM_JUDGE_score average: 1.508000
+
+Spearman correlation with SIDE
+SIDE_score vs LLM_JUDGE_score: 0.168327

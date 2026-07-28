@@ -1,0 +1,549 @@
+target,raw_predictions,correctly_predicted,SIDE_score
+<s>Link a component ID to its producing atom for DAG traceability.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.32329797744750977
+<s>Process data in batches and execute the given query.,"<s>
+ * <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",0,0.33745378255844116
+<s>Filter property by piid.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,1.817941665649414e-05
+<s>Save graph ontology to a separate table with {graph_name}_ontology,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.22844776511192322
+<s>Adds tracing metadata to the control message and marks its completion.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.2844323217868805
+<s>Filter OpenAPI paths to only include allowed endpoints.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4784688949584961
+<s>Handle task completion and clean up.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.03920339047908783
+<s>Get MIME type from format or guess from file extension.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4864097833633423
+<s>Proxy class to generate client from OpenAPI schema.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5581291317939758
+<s>Check and install required dependencies,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5163459181785583
+<s>Get a tagger from the registry; raise ValueError if it doesn't exist.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6832116842269897
+<s>Get the type of a parameter from the schema.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3902803957462311
+<s>Start tracing with enhanced error handling and async support,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.3378950357437134
+<s>Generate audio from phonemes,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.4238269031047821
+<s>Build context string from conversation history,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.09249012172222137
+<s>Convert to AWS API parameters.,<s>Convert this object to a dictionary,0,0.5343748331069946
+<s>Not really needed for this tool (use return of execute() directly),"<unk>
+
+    public static void main(String args[]) {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.7840449810028076
+<s>Load the classification model using adaptive-classifier library.,<s>Load the model and return it,0,0.9282533526420593
+<s>Load the OptiLLM Bench dataset.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.0032628439366817474
+"<s>Initialize the LLM planner with an agent, which will be used as the starting point for the workflow.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.12132355570793152
+<s>Automatically discover and import all processors,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3662284016609192
+<s>Initialize the LinearSource with rate limiting state.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.18620169162750244
+<s>init model on this single gpu and let it answer asign chunk of questions,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.3646330237388611
+<s>:param video_url: youtube video url :param output_dir: file path to save,<s>Download a video and store the result in the,0,0.9404659271240234
+<s>Call callback handler in main loop,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.08126218616962433
+<s>Generate audio from phonemes.,<s>Generate a new audio file,0,0.6242910027503967
+<s>Prepares the user data directory if necessary.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.7716101408004761
+<s>Validate the in_value based on the type.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.24638527631759644
+<s>Convert the prompt to an MCP prompt.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.148252934217453
+<s>Get a value using dictionary syntax: context[key],"<unk>
+
+
+function init() {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.7976423501968384
+"<s>Returns an MSA containing just the query sequence, never errors.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.43156442046165466
+<s>Feedback of web search to agent.,"<unk>
+
+
+class CBaseApp : public CApp",0,0.15595385432243347
+<s>Map entity network using notes and basic info,<s>Map the <UNK> to the <UNK>,0,0.006443990394473076
+<s>Initialize the KV cache in all workers.,<s>Initialize the cache,0,0.8651735782623291
+<s>Build service characteristics for Amazon Keyspaces.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6362007856369019
+<s>Returns a string with the object's config and run time state,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.02012660540640354
+<s>Return consistent browser options dictionary for both sync and async methods,<s>Returns a dictionary with the following properties,0,0.5839194059371948
+<s>Dimensions must be a multiple of 64 otherwise a GGML_ASSERT error is encountered.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.6586201786994934
+<s>Fixture for a CodeExecutorContext with some pre-populated data.,<s>Return a new <UNK> object with the given attributes,0,-0.26632314920425415
+<s>Format a comment body with code snippet and suggestion if provided.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.27248305082321167
+<s>Save credentials to file.,<s>Save the current state of the <UNK>,0,0.4158787429332733
+<s>Extracts JSON from markdown-formatted response.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5011993050575256
+"<s>Retrieves the first head_bytes bytes (1 MB by default) from the S3 object using a range request, and extracts the first response record's target URI from the HTTP headers.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.8927245736122131
+<s>Get the weather for a given city.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.6126993894577026
+<s>Simulate benchmark evaluation with predefined scores.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.7371823787689209
+<s>Adjust the log level to above level,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.01610301062464714
+<s>Convert pandas Series/DataFrames to primitive Python types,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.5947169065475464
+<s>Format the final solution,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.15815529227256775
+<s>Get Secret Manager client and project ID based on environment.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.9006633162498474
+<s>Get basic information about the dataset.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2968323230743408
+<s>Converts batch object to dictionary.,<s>Return a dictionary with all the fields,0,0.7530378699302673
+<s>Check if query is eligible for fast track processing,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.12181796878576279
+<s>Get the price per token for a specified model.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.46463727951049805
+<s>Get research tools based on configuration,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2917138934135437
+<s>Generate sub-queries based on initial search results and the main query.,<s><s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.15770955383777618
+<s>Load MCP server configuration from JSON file,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6881951689720154
+<s>Get all setting types,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.44752973318099976
+<s>Disables custom attention processors and sets the default attention implementation.,<s>Set the attention processor,0,0.8639558553695679
+<s>Sets the current state of the job with transition constraints.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.54443359375
+"<s>If you want to hash identifier in your storage system, use this safer",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.06274619698524475
+"<s>We noticed that sometimes if the task includes specific formatting instructions, they may interfere with the reasoning flow.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.1767219752073288
+"<s>Check that a dictionary item has at least 'name', optionally 'arguments' and no other keys to match a tool call JSON",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.0010619163513183594
+<s>Update the dispatch mode.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.3243715167045593
+<s>Handle content updates from the assistant.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2380378246307373
+<s>Add a prompt to the manager.,<s> Выводит вывод,0,-0.23191198706626892
+<s>Create and save comprehensive visualizations of the optimization results.,<s>Create a new visualization,0,0.9624753594398499
+<s>Compute different similarity metrics between embeddings,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.8876609802246094
+<s>Delete all audio files from the outputs directory.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.33763670921325684
+<s>Creates a log file and logging object for the corresponding session ID,<s><UNK> the <UNK> of the <UNK>,0,-0.6208710074424744
+<s>Convert all python files in agent/prompts to json files in agent/prompts/jsons,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.1400902420282364
+<s>Create a text/markdown component.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2339724749326706
+<s>Set up test fixtures.,<s>Set up the test environment,0,0.9531199932098389
+<s>Apply self-imposed rate limiting between requests,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.5433071851730347
+<s>Completely remove existing Alembic configuration including versions.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4746721684932709
+<s>Creates a new custom calendar in Google Calendar.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.01730574667453766
+<s>Separate the config into create_config and extra_kwargs.,<s>Test that the <UNK> is working,0,0.15018807351589203
+<s>Format server information for display to planners,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.906876266002655
+<s>Format a question for the benchmark dataset,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.033305756747722626
+<s>Get tool by key.,<unk>,0,-0.6082942485809326
+<s>Serialize object in a stable way for hashing.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.24150536954402924
+<s>Register the MCP tools used by this controller.,<s>Register all the tools in the <UNK>,0,0.9513890743255615
+<s>Convert milliseconds to ASS timestamp format (H:MM:SS.cc),<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.7437120079994202
+<s>Retrieve the configuration for a given model version.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.31747788190841675
+"<s>Retrieve the Cortex Search Service (database, schema, service) to use from the configuration, or raise an error.",<s>Returns the <UNK> of the given <UNK>,0,-0.3541291654109955
+<s>Save the current Faiss index + metadata to disk so it can persist across runs.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.17854085564613342
+<s>Convert a JSONL file to a CSV file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.12311279773712158
+<s>Apply masking to all values in nested structure.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.6147969961166382
+<s>Decorator to mark APIs as deprecated.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.09808635711669922
+<s>Initialize the service with browser-compatible components,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.41463568806648254
+<s>Format Wayback Machine timestamp into readable date,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.5304386615753174
+<s>Get the actual skill states for a given skill category by importing its module.,<s>Return a set of all the states,0,0.8257734775543213
+<s>Handle progress updates from the strategy.,"<unk>
+ * <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",0,-0.19288255274295807
+<s>Override that uses the local get_llm with database access.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.3996180295944214
+"<s>Convert to dictionary, including document_id",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2209487408399582
+<s>Decorator to mark a method as an MCP tool for later registration.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.26377928256988525
+<s>Convert a 32-character OpenTelemetry trace ID to a UUID-like format.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.072499580681324
+<s>Get the Azure Search endpoint configuration from CONFIG,<s>Return the current state of the <UNK>,0,-0.1016705334186554
+<s>Save the full results to a JSON file for analysis.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3066418170928955
+<s>Create a mock httpx.AsyncClient.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.44073668122291565
+<s>Log workflow execution steps for debugging,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.25677067041397095
+<s>Generate embedding for app.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.30674898624420166
+<s>Get the current OS name in the same format needed for browserforge :return: Current OS name or `None` otherwise,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.8125947713851929
+<s>Context manager exit: stop timing and log results.,<s><UNK> a <UNK> a <UNK> a <UNK>,0,0.015003180131316185
+<s>Create a new directory for the current turn.,<s>Create a new database,0,0.5605155825614929
+<s>Copy the StreamInfo object and update it with the given StreamInfo instance and/or other keyword arguments.,"<s>
+ * <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",0,0.009776335209608078
+<s>Writes processed inference result to a directory.,<s>Write the results to disk,0,0.9147758483886719
+<s>Support selecting attribute values using ::attr() pseudo-element,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.05328745022416115
+<s>Return the corresponding torch attribute based on the device type string.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.7821837663650513
+<s>Initialize the KV cache in all workers.,<s>Initialize the cache,0,0.8651735782623291
+<s>Returns a string with the object's config and run time state,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.18787144124507904
+<s>Convert the query response to a dictionary.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.0610259547829628
+<s>Extract URLs from a JSONL file.,<s>Extract the <UNK> from the <UNK>,0,-0.4147343933582306
+<s>Generate HTML for status indicator.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4608318507671356
+"<s>Get the port to listen on, using config or environment.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.7795130610466003
+<s>Parse the rules file and organize rules by PDF.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.14549291133880615
+<s>Download a file from a URL and save it to the cache directory.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5361727476119995
+<s>Note that here we only asks execute_all and execute_rank_zero to be implemented,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.13652841746807098
+<s>Initialize the mock Auth0 instance.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6367942094802856
+<s>Recreate a collection in Qdrant,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.051389604806900024
+<s>Convert response to dictionary format,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.10798437148332596
+"<s>Fetches a random fact from the ""uselessfacts.jsph.pl"" API.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.1227332055568695
+<s>Fetch the maximum batch size from the Triton model configuration in a thread-safe manner.,<s>Returns the maximum batch size for a model,0,0.893569827079773
+<s>Creates a text response for testing.,<s>Create a new instance of the class,0,-0.5230792164802551
+<s>Create instance from dictionary,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.16773860156536102
+"<s>Searches for a JSON object within the string and returns the loaded JSON if found, otherwise returns None.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4072788953781128
+<s>Create a openai vector store for gpt assistant,<s>Create a new vector store,0,0.7136733531951904
+"<s>Get configuration for a specific model, with fallback to defaults.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4064502716064453
+"<s>Checks if a string is in a valid resolution format (e.g., ""1024x768"").","<s>
+ <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",0,0.04646299034357071
+<s>Create a new item.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2502368092536926
+<s>Create a ScheduleSampler from a library of pre-defined samplers.,"<s>
+
+
+class C <UNK> <<unk>> <UNK> <UNK> <UNK> <UNK><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.729613721370697
+<s>Compare configured window size with actual size and report differences,<s>Validate that the window size is correct,0,0.8855384588241577
+<s>Clean up GPU and CPU memory to prevent VRAM overflow during multiple generations.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.10786396265029907
+<s>Load the model into   /dev/shm   to make the process of loading the model multiple times more efficient.,<s>Copy a file to a shared memory,0,0.9472463726997375
+<s>Parses a JSON string and returns a dictionary.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2729446291923523
+<s>Class method to create a new Vocos model instance from a pre-trained model stored in the Hugging Face model hub.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.21335099637508392
+<s>Adds legal comment at the top of the mmCIF.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4779611825942993
+<s>Parse datetime from Microsoft Graph API format.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.47237497568130493
+<s>Get authentication headers for OpenSearch requests.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6744871139526367
+<s>Configure loguru logger with custom formatting,<s><UNK> the <UNK> of the <UNK>,0,-0.3739931285381317
+<s>Convert to a dict for submission to redis,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.21484345197677612
+<s>Get a dictionary mapping topic names to their descriptions.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5424449443817139
+<s>Press a hotkey combination,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5214921236038208
+<s>Close connections that have been idle for longer than the timeout.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.13303542137145996
+<s>Recursively builds the agent tree.,<s>Build a tree of <UNK> objects,0,0.33143845200538635
+<s>Return a dictionary containing name to a shape and dtype.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.2110220491886139
+"<s>Safely read a file, returning None if it doesn't exist or on error.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.20930010080337524
+<s>Initializes the MCP client.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2930418848991394
+<s>Fix permissions for Chrome user data directory,<s>Fix permissions for Chrome,0,0.9378663301467896
+<s>progressive init strategy (with noise),<s>Initialize the model with a progress bar,0,0.8528910875320435
+<s>Build the refinement prompt for the optimizer,"<unk>
+
+
+    < <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",0,-0.23263008892536163
+<s>Extract Python code blocks from text.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.2125861644744873
+<s>Check and install required dependencies,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5102493166923523
+<s>Very rough gauge: a wall of recent negative headlines can be a *positive* for a contrarian.,<s><UNK> the <UNK> of the <UNK>,0,0.5339479446411133
+"<s>n=4, no sep:             '(a (a (a (a)?)?)?)?' - n=4, sep=',', prefix:    '("","" a ("","" a ("","" a ("","" a)?)?)?)?' - n=4, sep=',', no prefix: '(a ("","" a ("","" a ("","" a)?)?)?)?'",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.5007365942001343
+"<s>Comment out magic commands, shell commands, and direct execution commands in the script content.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.08800136297941208
+"<s>Converts an OmegaConf object to native types (dicts, lists, etc.)",<s>Convert a dictionary to a native type,0,0.7724044919013977
+<s>List all fail conditions for the current project's deployments.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2615230083465576
+<s>Return a list of mutating keywords found in the SQL (excluding comments).,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.1496521532535553
+<s>Generate a trace filename based on the path settings.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6250495910644531
+<s>Load the prompt template from the markdown file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.401189386844635
+<s>Custom serialization that properly uses AgentHistory's model_dump,"<unk>
+
+    public static void main<s><unk><unk><unk><unk><unk>",0,-0.2820203900337219
+<s>Check if directory should be ignored.,<s>Returns true if the given string is a valid <UNK>,0,-0.4921351671218872
+<s>Use AudioSegment to load audio from all supported audio input format,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.0571637786924839
+<s>Print equivalent curl command for debugging.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.29203251004219055
+<s>Log which conversion capabilities are available.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.26834604144096375
+<s>Load OpenAI voice and model mappings from JSON,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4220620095729828
+<s>Returns the generated PyDoc string.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.15517204999923706
+<s>Get the currently active MCP server.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4270917773246765
+<s>Load images from directory,<s>Load all images from the database,0,0.9391722083091736
+<s>Create sample document chunks for testing,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.1421363651752472
+<s>Update internal state dictionary with cleaned component values.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.3869076371192932
+<s>Initialize and run the paper summarization agent.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.40964847803115845
+<s>Collects the state dict and dump to disk.,"<s>
+ * This is the main function that will be called",0,0.05462978780269623
+"<s>Load the model from the given model path (normally GGUF, GGML)",<s>Load the model from disk,0,0.9157497882843018
+<s>Switch to a different application that is already open,<s><UNK> the <UNK> of the <UNK>,0,-0.257313072681427
+"<s>Merge existing and new data, avoiding duplicates based on a key field.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>,0,0.03463415428996086
+<s>Checks if a given Hub revision exists.,<s>Check if the hub revision exists,0,0.9866253137588501
+<s>Updates the session state based on the event.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.28343334794044495
+<s>(Experimental) Restart the code executor.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.10719436407089233
+<s>Calculates the FID of two paths,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.26355212926864624
+<s>Note that this operation is in-place,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.7510479092597961
+<s>Update macOS Platform UUID,<s>Update the <UNK> UUID,0,0.8298482894897461
+<s>Converts a QueryRequest instance into a QueryParam instance.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.47046202421188354
+<s>Process a single audio file by checking its existence and extracting duration.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.3366926908493042
+<s>Creates a BigQuery dataset if it does not already exist.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6039424538612366
+<s>Get color for a node type to match the UI color scheme.,<s>Returns the color of the given node,0,0.9589065909385681
+<s>Sample fake chunks for testing retrieve_chunks,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.3512161672115326
+<s>Synchronous implementation of search_by_url for thread execution,<s>Search for a given URL,0,0.9201698303222656
+"<s>Get all pages from the document files for processing, preserving file and line order.",<s>Get all the documents from the database,0,0.7936606407165527
+<s>Decrypt base64-encoded ciphertext with XOR.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.019030649214982986
+<s>Store a conversation turn in memory.,<s>Store the current state of the conversation,0,0.9665353298187256
+<s>Get the vocabulary dictionary mapping characters to token IDs,<s>Returns a dictionary mapping symbols to their index,0,0.7530391216278076
+<s>Saves settings to the JSON file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.30382582545280457
+<s>Create isolated branch for every sub-agent.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.31607046723365784
+<s>Provide LLM context for tables.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3009299039840698
+<s>Generate and return a summary of the benchmark results.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.24835830926895142
+<s>run a shell command and optionally assert success.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.06706959754228592
+<s>Resolves a single $ref string.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6049534678459167
+<s>Turns a specific light on (true) or off (false) using phue2.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.6272315979003906
+<s>List files and directories under CONTEXT_PATH/relative_path.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6321682333946228
+<s>Process a single query in parallel.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.44122079014778137
+<s>Transform raw project data into a JiraProjectEntity.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.8366513252258301
+<s>Generate a formatted context string describing all intents,<s>Return a string with the current state of the,0,0.303090900182724
+<s>Create a SourceConnection from a source_connection ORM model.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.13059136271476746
+<s>Replace {agentlist} placeholder before validation/assignment.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.13889655470848083
+<s>Class method to create a new Vocos model instance from a pre-trained model stored in the Hugging Face model hub.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.08058539032936096
+<s>Convert an MCP tool result to an LLM input type,<s>Returns a Content object with the given properties,0,0.6728928089141846
+<s>Loads custom model-specific settings,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6980953812599182
+<s>Get the latest review for shopping admin.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2663557231426239
+<s>Initialize the OCR processor.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.08787822723388672
+<s>Create a PKCE challenge with code_verifier and code_challenge.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.1699596792459488
+<s>Add a tool to the server.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.19324250519275665
+<s>Clean up all temporary files including part working directories,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.30574801564216614
+<s>Print full validation details for a single file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.08721214532852173
+"<s>Get the API key, prioritizing agent config then system config.",<s>Returns the API key for the current environment,0,0.9778232574462891
+"<s>Analyzes the given text as instructed, and returns the analysis.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.21434229612350464
+<s>Generate a path for saving the final DataFrame.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6376862525939941
+<s>Automatically prepend timestamp to migration filenames.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.00806746818125248
+<s>Returns the MSA profile and deletion_mean features.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.6324167251586914
+<s>Mark a subscription as deleted by Stripe subscription ID.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.37896105647087097
+<s>Collects the state dict and dump to disk.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.02521878108382225
+<s>Custom error messages for exception,<s>Test that the <UNK> works,0,-0.2959572970867157
+<s>Save image data to a file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.13229434192180634
+<s>Set up test fixtures.,<s>Set up the test environment,0,0.9785597324371338
+<s>Called by ExternalRayDistributedExecutor collective_rpc.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.28492751717567444
+<s>Visualize a scroll action by drawing arrows on the screenshot.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.4357055127620697
+<s>Convert retrieval results to formatted string.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.041842591017484665
+<s>Format search results in a consistent format.,<s>Format the results of a search,0,0.9052767157554626
+<s>Control initial session with OpenAI.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.068153977394104
+<s>Check if the file extension is supported.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4919435679912567
+<s>Generates HTML with differences between strings a and b.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.1837361752986908
+<s>Get basic information about the dataset.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.29403311014175415
+<s>Builds the Docker image.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2315303087234497
+<s>Create a node with relevance information,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.22747483849525452
+<s>Get the speaker selection result.,<s>Get the current user s profile,0,-0.25137341022491455
+<s>Convert a file URI to a local file path,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.8104307055473328
+<s>Check if the file is a video file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.09419795870780945
+"<s>Get context, with graceful fallback to global context if needed.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.23134160041809082
+<s>Return the standard system message for Morphik's query agent.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.394124299287796
+<s>Format a step result for display to planners,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.2717866003513336
+"<s>Replaces the domain (and port, if applicable) of the presigned URL with that of the base URL only if the base URL contains 'localhost' or an IP address.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.7114747166633606
+<s>Generate a list of audio file paths,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.09004662930965424
+<s>Produce a new ModelSettings by overlaying any non-None values from the override on top of this instance.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.05572742968797684
+<s>Generate new machine ID,<s>Generate a new UUID,0,0.49197500944137573
+<s>Format child page and database blocks.,<s><s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>,0,-0.14911822974681854
+<s>Load IOI tests for a given year.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.06637889891862869
+<s>Get DeepSeek Azure API version from config,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.528436005115509
+<s>update status as failed,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.18280088901519775
+<s>Check if URI matches template and extract parameters.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.40078479051589966
+<s>Only retry if the exception is not CancelledError and the attempt failed.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.01882248744368553
+<s>Validate that no values are dictionaries (depth 0).,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.14891666173934937
+<s>Assumes the model is either prompted to emit \boxed{answer} or does so automatically,<unk>,0,0.2481502890586853
+<s>Get the Gradio app code.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6319495439529419
+<s>Convert DTO to dictionary,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.11881216615438461
+<s>Create a Configuration instance from a RunnableConfig.,<s><UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4699874222278595
+<s>Calculate SHA1 hash of the equation string and rendering parameters.,<s>Test that the correct <UNK> are returned,0,0.3424777090549469
+"<s>Compute the mean and variance of the diffusion posterior: q(x_{t-1} | x_t, x_0)",<s>Return the mean and variance of the posterior,0,0.9855013489723206
+"<s>Convert time (in seconds) to the format: hours:minutes:seconds,milliseconds",<s>Test that the correct values are returned for the,0,0.4062102138996124
+<s>Save the report to a file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.04585663229227066
+<s>Initialize the KV cache in all workers.,<s>Initialize the cache,0,0.8683249354362488
+<s>Provide a transactional scope around a series of operations.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.8778862357139587
+<s>Get processor before ensuring initialization,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.40121182799339294
+<s>Roll out the agent using teacher forcing actions,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.4397382140159607
+<s>Show a platform-specific permission dialog and return True if approved.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.43609121441841125
+<s>Creates the arguments we will use while launching playwright's browser,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.39624136686325073
+<s>Strip markdown fences and extract the first JSON object.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5405948162078857
+<s>Make request and print raw response,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3932172358036041
+"<s>Merge audio files, add a brief silence",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.43858781456947327
+"<s>Pop the topmost context off the stack, ending dependency tracking for the current atom.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.1317700743675232
+<s>Remove the obsolete checkpoints that exceed the save_limit.,<s>Remove obsolete checkpoints,0,0.5923131704330444
+<s>Get the Qdrant endpoint configuration from CONFIG,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.720244824886322
+<s>Collects the state dict and dump to disk.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.006113111972808838
+<s>Validates the fold input contains MSA and templates for featurisation.,<s>Validate the input and return the result,0,0.5144314765930176
+<s>Get an UnrealSpeech skill by name.,<s><s><s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>,0,-0.5791983008384705
+<s>Convert money expressions to spoken form,<s>Convert a string to a number,0,0.9420617818832397
+<s>Press a hotkey combination,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4437181353569031
+<s>Print the model size.,"<s>
+
+    def test_get_field_value_with_type",0,-0.4850631356239319
+<s>Read text content from a PDF file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.013456601649522781
+"<s>Sanitize and format input data, including handling of nested lists and dictionaries.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.39042043685913086
+<s>Caches all S3 paths in the dataset to the local cache directory.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.40290725231170654
+<s>Provide a mock response fixture for testing.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.19441074132919312
+<s>Creates a fasta file with the sequence with line width limit.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.32619601488113403
+<s>Start the logger and return the session_id.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.18494610488414764
+<s>load configurations based on the given prefix.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4514678418636322
+<s>Write content to a file with the specified filename.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.018584735691547394
+<s>Return usage summary of the response using RESPONSE_USAGE_KEYS.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4072645902633667
+"<s>When a Connection is deleted, also delete its IntegrationCredential if present.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6077930331230164
+<s>Analyze a JSONL file containing  markup and return all types found with counts,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.25857266783714294
+<s>Create a default configuration file if none exists,<s>Create a new configuration file,0,0.8826584815979004
+<s>Stop all services after tests.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.12938432395458221
+<s>Calculates the FID of two paths,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.2543473243713379
+<s>Combine coverage data from subprocesses at the end of the test session.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.014000952243804932
+<s>Build the parameter buffer in each pp rank,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.44854965806007385
+<s>Preprocess MMMU dataset to reformulate open questions to multi-choice ones.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.7087406516075134
+<s>Ensure expected_output is a dictionary,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.26312243938446045
+<s>Get the latest recording and trace files,<s>Return the latest version of the given file,0,0.8944749236106873
+<s>Execute code in E2B sandbox and return the result.,<s><s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.030255697667598724
+<s>Convert a trajectory to formatted text.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.31279775500297546
+<s>Get basic information about the dataset.,<s><s> < <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5014018416404724
+<s>Disconnect from the currently active MCP server.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2044641226530075
+<s>Register a handler for a signal.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.38848811388015747
+<s>Downloads a pre-trained Sana model from the web.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2453402727842331
+<s>Appends or overwrites search results to a JSON file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5888485312461853
+<s>Add a new knowledge base ID.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.41229379177093506
+<s>Get branding config with logo and favicon as data URLs,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.7777489423751831
+<s>Analyze dimensions and statistics of a voice tensor.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.4742457866668701
+<s>Fixture to provide the path to the test PDF file,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.34182876348495483
+<s>Download the dataset into self.data_dir using huggingface datasets.,<s>Download the dataset and store it in the database,0,0.9725611209869385
+<s>Minimal simulation of processing the input data.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.23212207853794098
+<s>find the RateLimitMiddleware instance in the middleware stack,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.01702023483812809
+<s>Store tools and process to decision node,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5417580008506775
+<s>Plot total conversation time per provider and save to file.,<s>Plot the total conversation time,0,0.9891095161437988
+<s>Extract tool calls from a trajectory,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.10407558083534241
+<s>Close the Milvus connection.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2455950230360031
+<s>Log validation generation to mlflow as artifacts,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.38098007440567017
+<s>Register error handlers with the Flask app.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.15917271375656128
+<s>Print a formatted summary of timing information.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.5498473644256592
+<s>Generate Cursor checksum from token using the algorithm,<s>Generate a checksum for a cursor,0,0.7433082461357117
+<s>Get the screen size.,<s><UNK> the <UNK> of the <UNK>,0,0.5163707733154297
+<s>Generate sub-questions based on the topic.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.16079318523406982
+<s>Checks the status of the main hub and connections.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.06409855931997299
+<s>Creates a tool result message for testing in Google's format.,<s>Create a new <UNK> object,0,-0.5604603290557861
+<s>Merges a list of tensors based on their DTensor placement,"<s>
+ * <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",0,0.6103784441947937
+<s>Simple qualitative analysis of recent news.,"<s>
+ * This is a generated file",0,-0.19242344796657562
+<s>Encode image to base64,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.16006432473659515
+<s>Save raw response data (including logprobs) to a separate file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.24714945256710052
+<s>Note that here we only asks execute_all and execute_rank_zero to be implemented,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.13282424211502075
+<s>Use deepseek api to generate text.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3446424901485443
+<s>Copy old config window_width & window_height to window_size.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.1459384262561798
+<s>Prepare request for batch_get_documents endpoint,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6306766271591187
+<s>Starts automatic cleanup task.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.07955971360206604
+<s>The file agent is a special agent for file operations.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4013369679450989
+<s>Downloads a PDF file from the specified URL.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.50975102186203
+<s>Load all JSONL files from the input directory.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.545494794845581
+<s>Fixture that creates a FastMCP server with tagged resources and templates.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.9027480483055115
+<s>Load environment variables from .env file if it exists,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.35892361402511597
+<s>Add a single tool to the collection.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.16581588983535767
+<s>Generate a batch of responses using the specified provider.,<s>Generate a batch of responses,0,0.9625561833381653
+<s>Return kwargs for model initialization.,<s><UNK> a <UNK> a <UNK> a <UNK>,0,-0.5548890829086304
+<s>Validate if adapter exists and is compatible,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.014391764998435974
+<s>Get response using LiteLLM,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.27712300419807434
+<s>Extract Python code blocks from text.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.02722659334540367
+<s>Handle message from JavaScript,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.19589674472808838
+<s>Replace keys of old prefix with new prefix in state dict.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.19384455680847168
+<s>Convert MIDI note number to note name,<s><UNK> a <UNK> object,0,0.277209609746933
+<s>Draw the first `n` samples in order from the specified split.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.40114009380340576
+<s>Create a loggable version of messages with image data truncated.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.05787190422415733
+<s>Build documents from text chunks,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.04792444780468941
+<s>Extract all variable references ${var_name} from the expression.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2689763307571411
+<s>Format repository search result as preview,<s>Return a dictionary with the properties of the repository,0,0.6986132264137268
+<s>Analyze chat history and extract tool call information.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.12497667223215103
+<s>Creates a log file and logging object for the corresponding task Name,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.20275960862636566
+<s>Generator that yields lines from multiple JSONL files.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.33048945665359497
+<s>Try to add the CUDA library paths to the system PATH.,<s>Add the <UNK> library to the PATH,0,0.9382728934288025
+<s>Format a single page entry as either a parenthesized path or a markdown link.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3791436553001404
+"<s>Parse the size string with optional suffix (KB, MB) into bytes.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.43846628069877625
+<s>Handle signals to ensure clean subprocess termination.,"<unk>
+
+
+class CBaseListCtrl : public CListCtrl",0,-0.25315821170806885
+<s>Print optimization results in a nicely formatted way.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.5613409876823425
+<s>Run the stateless StreamableHTTP server.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2804257571697235
+"<s>Stacks polymer features, adds empty and keeps ligand features unstacked.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.2688271999359131
+<s>Rewrites the schema for use in SQLGlot.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.42251020669937134
+<s>Get default values from config files.,<s>Returns a dictionary with all the properties,0,0.4584296941757202
+<s>Writes the input JSON to the output directory.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.038648299872875214
+<s>Generate audio segments for each Q&A pair.,<s>Generate audio segments for the given text,0,0.9315996170043945
+<s>Format the DocumentTask as a string for the TaskManager to work with.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.13587048649787903
+<s>Sort agent signals in a consistent order.,<s><UNK> a <UNK> a <UNK> a,0,0.2867932915687561
+<s>Log debug information if debug mode is enabled.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.01960821822285652
+"<s>Load and preprocess an image from the specified path, resizing and padding it to the target size.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.2699388861656189
+<s>Generate a single greedy sample with temperature=0.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.483229398727417
+<s>Fetches the spec from API Hub and generates the toolset.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2940118908882141
+<s>Add a user/assistant pair to the cache if not present.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.24170824885368347
+<s>Strip markdown fences and extract the first JSON object.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5229717493057251
+<s>Create and configure a requests session with retry capabilities,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4023677408695221
+<s>Convert a Discord snowflake ID to ISO timestamp string.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.8716481328010559
+<s>Wait for service to be healthy.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.2335972785949707
+<s>Creates an agent engine for Academic Research.,<s>Create a new <UNK> instance,0,0.5378569960594177
+"<s>Set multiple arguments for the parser at once globally :param kwargs: The keywords can be any arguments of the following: huge_tree, keep_comments, keep_cdata, auto_match, storage, storage_args, automatch_domain",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.11661483347415924
+"<s>When optimizer is None, it is Reference Policy",<s>Initialize the actor object,0,0.9372957944869995
+<s>List default first if it exists,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5759291648864746
+<s>Return a mock session object for testing.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.10129916667938232
+<s>Load a JSON file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5096549391746521
+<s>Return the string representation of the plan.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.12799352407455444
+<s>Get the current date in the format YYYY-MM-DD,"<unk>
+    public void testGetSet() {
+        assertEquals(0, this.getSet().size());",0,0.168694406747818
+<s>Fetch the JSON datastore from the presigned URL.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.8229103088378906
+<s>Free up memory by garbage collection and emptying CUDA cache.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.12321118265390396
+<s>Add a prompt to the manager.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.40685075521469116
+<s>Save the settings for this model to models/config-user.yaml,<s>Save the current state of the model,0,0.8083055019378662
+<s>Returns a default usage object for testing.,<s><UNK> a <UNK> object,0,-0.11599311977624893
+<s>Generate audio using OpenAI API.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.29550883173942566
+<s>Get the target module where an object should be documented.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5367507934570312
+<s>Ensure only graph-related fields are present.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.057285577058792114
+<s>Log vectorization startup information.,"<s>
+
+import java.util.*;
+import java.util.regex.*;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
+import java.util.regex.PatternSyntaxException;",0,-0.07486182451248169
+"<s>Truncates text content within a list of multimodal elements, preserving the overall structure.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.24979057908058167
+<s>Format validation errors into a more readable string.,<s>Return a string with the error information,0,0.9468683004379272
+<s>Checks if a given Hub revision exists.,<s>Check if the hub revision exists,0,0.9860167503356934
+<s>Calculate and save partial results for a specific agent-task pair,<s>Save the current state of the <UNK>,0,0.6122363805770874
+<s>Set text matrix and text line matrix,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.811431884765625
+<s>Get the metadata for a tool by its name.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.7136375904083252
+<s>Get brancshes of the repository,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.7660790681838989
+<s>Create a Configuration instance from a RunnableConfig.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.38805586099624634
+"<s>Get a model class, first by model name, then by task type.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.1890358328819275
+<s>Format sources with numbers for citation.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.38389652967453003
+<s>Compile dataset C++ code.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.06559863686561584
+<s>Crawl website starting from base_url,<s><UNK> the <UNK> of the <UNK>,0,-0.6851076483726501
+<s>Strip markdown fences and extract the first JSON object.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.654840886592865
+<s>Replace a message at a given index,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.06578663736581802
+<s>Generate output for the CLI based on the content of a file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.006658708676695824
+<s>Get the transcript object from AssemblyAI,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.17852115631103516
+<s>Update the status of an agent.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.11153966188430786
+<s>Note that this operation is in-place,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.8114758133888245
+<s>Register a component type string to handle a given mimetype.,"<s>
+ <p> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",0,-0.5859061479568481
+<s>Determine if an image is from ECR.,<s>Check if the image is an <UNK> image,0,-0.5169640183448792
+<s>Extracts x and y pixel coordinates from a CSS transform string.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.3679891526699066
+<s>Check if Ollama is running and accessible at the given URL.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.8576494455337524
+<s>Count the number of a variable :param variable: a variable :return: the number of a variable,"<unk>
+    public static void main(String args[]) {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.01840592920780182
+<s>Download a Wikipedia article and store it as a text file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.625592052936554
+<s>Check if the SNS subscription being unsubscribed is from a tagged topic.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.08804705739021301
+<s>Clean up temporary files.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3183424472808838
+<s>Get the usage of tokens and their cost information.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.26839664578437805
+<s>Increments _number_of_llm_calls and enforces the limit.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.7090120911598206
+<s>Pre-process the LLM request for Gemini 2.0+ models to use the code execution tool.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3914960026741028
+"<s>given TP,DP,PP rank to get the global rank.",<s>Return the rank of the current thread,0,0.7222141027450562
+<s>Infer the appropriate transport type from the given URL.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.8207531571388245
+<s>Load local model with default parameters.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.1770147830247879
+<s>Get the current server configuration and status.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5249061584472656
+<s>Prints the number of trainable parameters in the model.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.4308606684207916
+<s>Get emoji for a message type - used only for logging display,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.045000363141298294
+<s>Run the Anthropic agent example.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.10367663204669952
+<s>Extracts the first text part from the user message.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.43634647130966187
+<s>Calculate the cost of the completion using the Bedrock pricing.,<s>Calculate the cost of a given model,0,0.9730278253555298
+<s>Get a footnote string for a step log with duration and token information,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.11913888156414032
+<s>Cancel current tasks that should be interruptible.,<s>Cancels all tasks that are currently running,0,0.9943234920501709
+<s>Compare MD5 hashes for GCS blobs.,<s>Check if the file is up to date,0,0.15625561773777008
+<s>Set up logging to capture only LLM calls to a directory.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2635091245174408
+<s>Calculate global rank with support for CP/EP parallelism,<s>Calculate the global rank of the model,0,0.9660807847976685
+<s>load model and tokenizer using configuration and local files.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5356407761573792
+<s>Shutdown the exporter by forwarding to the underlying exporter.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.08083558827638626
+<s>Returns a string with the object's config and run time state,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.07724535465240479
+<s>Fixture for a mock OperationParser.,<s>Test that the <UNK> is working,0,0.42667853832244873
+<s>Trim a 511x1x256 tensor to 510x1x256 by removing the row with least impact.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.8137232661247253
+<s>Clear all cached data for all servers.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6172730326652527
+<s>Wrapper for running SimpleQA benchmark in parallel.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.726198136806488
+<s>Creates the input template for the LLM.,"<unk>
+
+    public static void main(String args[]) {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.17349867522716522
+<s>Convert Hydra configs and other special types to regular Python types.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.22266189754009247
+<s>Save account information to file,<s>Save the current state of the account,0,0.921436071395874
+<s>Load the pipelines for the text classification used for routing.,"<s><s>
+ < <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",0,0.13020092248916626
+<s>Load environment variables from set_keys.sh,<s>Load the <UNK> configuration,0,0.9671423435211182
+<s>List all available MCP servers along with their available tools.,<s>Return a string with the <UNK> of the given object,0,-0.8154318332672119
+<s>Create chained .property() commands from properties dict,<s>Test that the correct <UNK> are returned,0,0.25083643198013306
+"<s>Replaces the domain (and port, if applicable) of the presigned URL with that of the base URL.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.7063146233558655
+<s>Get current memory usage.,<s>Return the current memory usage,0,0.9592989087104797
+<s>Summarize the given text content.,<s><s><s><UNK> <UNK> <UNK> <UNK><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>,0,0.03228829428553581
+<s>Create an AWS session using AWS Profile or default credentials.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6701018810272217
+<s>Creates a standardized error response for phue2 operations.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.4177785813808441
+<s>Create a FastMCP server with a custom route.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.793364405632019
+<s>Convert to a dict for submission to redis,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4453057050704956
+<s>hdfs capable to check whether a file_path is exists,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.567285418510437
+<s>Transform an input into an output sequence synchronously.,"<unk>
+
+
+
+ <UNK> <UNK> <UNK> <UNK> <UNK><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.310682088136673
+<s>Create sample chunks with base64-encoded images,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.40297818183898926
+<s>Generate parameters for each image-filter combination.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.3293660283088684
+<s>Returns the token id corresponding to the value of the `language` field,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.04976050928235054
+<s>Format search results into context for question generation.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3600325584411621
+<s>Fixture for common tasks.,"<s>
+ <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",0,-0.16083595156669617
+<s>Creates an HTML redline doc of differences between text1 and text2.,<s>Create a new <UNK> object,0,0.26798588037490845
+"<s>When optimizer is None, it is Reference Policy",<s>Initialize the actor module,0,0.916550874710083
+<s>Generate audio using specified voice and save to WAV file.,<s>Generate a new audio file,0,0.9481152296066284
+<s>Greet a user with optional title and repetition,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.27270612120628357
+<s>Collate a batch of data.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.5668328404426575
+<s>Categorize modules by their primary focus.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.16215762495994568
+<s>Format a category into a readable string.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.28318291902542114
+<s>Creates a tool call output item from a tool call and its output.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.11843448877334595
+<s>Enters text into an element with the given ID.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.022450577467679977
+<s>Executed when Gunicorn is shutting down.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.19326327741146088
+<s>Add a prompt to the manager.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3616977035999298
+<s>Setup and cleanup the database for each test case.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3423168361186981
+<s>Extract and print the results from the Triton server response.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.21433718502521515
+"<s>given TP,DP,PP rank to get the global rank.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.9252781867980957
+<s>Handle decoding any unicode escape sequences embedded in a string (needed to render non-ASCII languages like chinese or arabic in the GIF overlay text),<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.39927396178245544
+<s>Check if a given list of numbers are prime.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.5379677414894104
+<s>Worker task for each thread,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.1582399606704712
+<s>Annotate the span with the message content.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.39654770493507385
+<s>Load local model with default parameters.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.07952781766653061
+<s>Construct the message sequence for JSON-schema enforcement.,"<s>
+
+..<unk><unk><unk><unk><unk>",0,-0.3850836753845215
+<s>Format the progress event for display.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.20919731259346008
+<s>Track memory usage in MB,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.40851080417633057
+<s>Transform the model name in each model_chunk in each pp stage into the name in inference engine,<s>Normalize the model name,0,0.928934633731842
+<s>Provide feedback based on the output of the code execution,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.4745028018951416
+<s>Generate debug-friendly string representation,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.18157267570495605
+<s>Set up the data directory for the application.,<s>Create a new database,0,0.814568281173706
+<s>Plays in-memory audio data (NumPy array).,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.38039451837539673
+<s>Creates empty str for non-initialized states.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.2834479510784149
+<s>Display quality metrics in test context,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.48577338457107544
+"<s>Returns a RequestContext object containing the DB session, the validated API key ID, and the project ID.",<s>Return the current state of the <UNK>,0,-0.37665361166000366
+"<s>Creates a new SSE server transport, which will direct the client to POST messages to the relative or absolute URL given.",<unk>,0,-0.18564070761203766
+<s>evaluate the similarity between prediction and gold #TODO,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.863306999206543
+<s>Get markdown export for a specific research,<s>Get the report from the database,0,0.7469568252563477
+<s>Post initialization hook to set the inference URL from settings.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.4781109392642975
+<s>Connect to the Blender addon socket server,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2932831645011902
+<s>Appends dimensions to the end of a tensor until it has target_dims dimensions.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.7706273198127747
+<s>Delete a resource from a research project,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.7559205889701843

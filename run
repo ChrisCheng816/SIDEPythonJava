@@ -1,0 +1,42 @@
+source /home/zcheng06/miniconda3/etc/profile.d/conda.sh
+conda activate side-py
+cd /scratch/zcheng06/SideJavaPy/SidePython/pipeline
+
+export RUN_ROOT=/scratch/zcheng06/SideJavaPy/SidePython/study-3/replay-runs/2026-04-30-new-side09
+export SIDE_CKPT=/path/to/your/new_side_checkpoint
+
+python run_base_replay.py \
+  --run-root $RUN_ROOT \
+  --skip-export \
+  --data-no-side-raw-dir /scratch/zcheng06/SideJavaPy/SidePython/study-3/replay-runs/2026-04-23-base-hf-side09/data/hf-no-side-raw \
+  --side-checkpoint $SIDE_CKPT \
+  --threshold 0.9 \
+  --skip-train-no-side \
+  --skip-train-with-side \
+  --skip-infer-no-side \
+  --skip-infer-with-side \
+  --skip-replace-codecomment \
+  --skip-score-inference \
+  --skip-score-annotation-side \
+  --skip-llm-judge \
+  --skip-compare-metrics
+
+---
+source /home/zcheng06/miniconda3/etc/profile.d/conda.sh
+conda activate side-py
+cd /scratch/zcheng06/SideJavaPy/SidePython/pipeline
+
+python run_base_replay.py \
+  --eval-mode llm \
+  --eval-target with-side \
+  --skip-data-stages \
+  --run-root /scratch/zcheng06/SideJavaPy/SidePython/study-3/replay-runs/2026-04-30-new-side09 \
+  --cuda-visible-devices 0 \
+  --judge-python-bin /home/zcheng06/miniconda3/envs/gptoss-judge/bin/python \
+  --judge-cuda-visible-devices 0,1 \
+  --train-batch-size 4 \
+  --eval-batch-size 4 \
+  --gradient-accumulation-steps 4 \
+  --skip-train-no-side \
+  --skip-train-with-side \
+  --skip-infer-no-side

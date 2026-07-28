@@ -1,0 +1,13 @@
+Average metrics
+BLEU4: 0.054113
+ROUGE_L: 0.334249
+METEOR: 0.170345
+ChrF: 0.243014
+TFIDF_COS: 0.171623
+
+Spearman correlation with SIDE
+SIDE_score vs BLEU4: 0.497575
+SIDE_score vs ROUGE_L: 0.545642
+SIDE_score vs METEOR: 0.532630
+SIDE_score vs ChrF: 0.545195
+SIDE_score vs TFIDF_COS: 0.514998

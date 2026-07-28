@@ -1,0 +1,22 @@
+我这个paper分为两个部分，一个是replication也就是复现部分，/scratch/zcheng06/SideJavaPy/code-summarization-metric项目是在这里。
+第二个是extension部分，把java版本的side变为python版本的side 项目是在这里/scratch/zcheng06/SideJavaPy/SidePython
+请你仔细阅读我的目录，我要你给我写paper。总共需要包含abstract，introduction，background and related work，methodology。后就是replication results，然后再是metric side results
+methodology分为两部分，一部分是replication的，一部分是extension的。paper中不能出现任何的文件名，变量名等等，都得用自然语言英语描述
+注意，对于extension，请仅仅关注目录pipeline和/scratch/zcheng06/SideJavaPy/SidePython/study-3/replay-runs中能覆盖到的部分，比如覆盖到的workflow等等。
+大体来说，对于extension 流程是First, I constructed data pairs for training the SIDE metric. The training setup used 3,600 training triplets and 400 validation triplets. Each triplet contains code, a good summary, and a bad summary. This allows SIDE to learn which summary is more semantically aligned with the code. This is the same process I used to reproduce the java version
+
+Then I used SIDE to filter the Funcom Python dataset. I set the filtering threshold to 0.9. After filtering, 17,137 out of 200,000 instances were retained, which is about 8.5 percent of the training data. To create a fair comparison, I also sampled an equal number of training examples as the control group without metric SIDE filtering.
+
+Finally, I trained CodeT5 separately on the unfiltered training data and the filtered training data by metric SIDE. Then I generated summaries and evaluated them using standard metrics and an LLM judge. This gives us two conditions: unfiltered data versus filtered training data.
+
+And the llm setting used here is Gpt5.3, with no reasoning mode, and the score range is from 1-5. 然后你仍需结合/scratch/zcheng06/SideJavaPy/SidePython来决定具体的workflow和内容
+
+在replication的结果部分，就是odds ratio对比那里，我需要你给我个表格，我原始论文中的结果对比reproduce的结果，但请注意，你只需要为我添上reproduce的结果，原始结果我自己填写
+在extension结果部分，总体结论是，SIDE filtering 不只是让平均指标变高，也让 SIDE 与其他评价指标之间的单调关系更明显。BLEU4 的平均分从 5.4121 到 6.3185，相关性从 0.50 到 0.54。ROUGE-L 从 33.4254 到 34.7324，相关性从 0.55 到 0.60。METEOR 从 17.0302 到 18.5237，相关性从 0.53 到 0.57。ChrF 从 24.3055 到 27.4066，相关性从 0.55 到 0.57。TFIDF-COS 从 17.1617 到 17.5747，相关性从 0.52 到 0.59。GPT 5.3 的分数提升最明显，从 2.508 到 3.602，提升约 1.094 分；它和 SIDE 的相关性也从大约 0.48 提升到 0.54。
+输出诊断也显示，这个条件下平均摘要长度只有 7.5 个 token，范围是 0 到 42，并且空摘要率达到 8.21%，说明没有过滤时模型更容易生成过短甚至空的摘要。输出上，平均长度增加到 9.2 个 token，空摘要率下降到 1.67%，说明过滤后的训练数据让模型生成的摘要更稳定，也更少出现空输出。
+因此对于extension我要你给我两个表，一个是对比表，一个是输出诊断对比表。
+总的来说你可以参考/scratch/zcheng06/SideJavaPy/csci665-final.pptx以及我的代码来了解此项目
+
+好现在请首先给我abstrct 和introduction 都要latex格式
+
+请你继续为我写study design，检查我的/scratch/zcheng06/SideJavaPy/SidePython目录，看看我需要什么subsection 我目前能想到的有llm a judge prompt设计，训练python java的side指标，数据的准备（java和python，注意，我python现在用的完整的searchnet python数据集 具体参考代码），jsonl repair，训练CodeT5+，损失函数对于训练side和codet5+。这些其中部分可能可以合并，或者我没想全，请你根据我的代码给我作为参考

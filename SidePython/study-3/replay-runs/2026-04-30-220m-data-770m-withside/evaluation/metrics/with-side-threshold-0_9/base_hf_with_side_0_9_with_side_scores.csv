@@ -1,0 +1,1272 @@
+target,raw_predictions,correctly_predicted,SIDE_score
+<s>Link a component ID to its producing atom for DAG traceability.,<s>Register a new producer,0,0.9034103751182556
+<s>Process data in batches and execute the given query.,"<unk>
+		return true;
+	}
+
+	public boolean isOverloaded() {
+		return<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.25472337007522583
+<s>Filter property by piid.,"<unk>
+		return true if the input is a valid input",0,0.009818345308303833
+<s>Save graph ontology to a separate table with {graph_name}_ontology,"<unk>
+ * @param {Object} options Options object",0,-0.1777627170085907
+<s>Adds tracing metadata to the control message and marks its completion.,"<unk>
+ * @param {Object} options Options object",0,0.5076813697814941
+<s>Filter OpenAPI paths to only include allowed endpoints.,<s>Create a new instance of <UNK>,0,0.29736626148223877
+<s>Handle task completion and clean up.,<s>Get the current user s current password,0,0.2409600019454956
+<s>Get MIME type from format or guess from file extension.,<s>Get the current time in seconds,0,-0.310014009475708
+<s>Proxy class to generate client from OpenAPI schema.,<s>Create a new instance of <UNK>,0,0.3139733672142029
+<s>Check and install required dependencies,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3368603587150574
+<s>Get a tagger from the registry; raise ValueError if it doesn't exist.,<s>Create a new instance of the given class,0,0.15680217742919922
+<s>Get the type of a parameter from the schema.,<s>Get the type of the first parameter in the list,0,0.847463071346283
+<s>Start tracing with enhanced error handling and async support,<s>Create a new instance of the given class,0,-0.08033984899520874
+<s>Generate audio from phonemes,"<unk>
+		return false;
+	}
+
+	public static boolean isWellFormed(String input) {
+<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.45683133602142334
+<s>Build context string from conversation history,<s>Create a new instance of the given class,0,0.10109090805053711
+<s>Convert to AWS API parameters.,<s>Convert the current state of the search to a dictionary,0,0.795796275138855
+<s>Not really needed for this tool (use return of execute() directly),"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.663674533367157
+<s>Load the classification model using adaptive-classifier library.,<s>Load the model from disk,0,0.893858015537262
+<s>Load the OptiLLM Bench dataset.,"<unk>
+
+
+def test_<unk><unk><unk><unk><unk><unk>",0,-0.00983816385269165
+"<s>Initialize the LLM planner with an agent, which will be used as the starting point for the workflow.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.23972740769386292
+<s>Automatically discover and import all processors,<s>Create a new instance of the given class,0,0.4778089225292206
+<s>Initialize the LinearSource with rate limiting state.,"<unk>
+    public void testGetSet() {
+<unk><unk><unk><unk>",0,0.05990403890609741
+<s>init model on this single gpu and let it answer asign chunk of questions,<s>Get the current time in seconds,0,0.5256655812263489
+<s>:param video_url: youtube video url :param output_dir: file path to save,<s>Download a video from a given URL,0,0.988113284111023
+<s>Call callback handler in main loop,<s>Returns true if the given field is contained in the given,0,-0.5756575465202332
+<s>Generate audio from phonemes.,<s>Generate a random number from a range,0,0.3755899667739868
+<s>Prepares the user data directory if necessary.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.6612505316734314
+<s>Validate the in_value based on the type.,<s>Create a new instance of the given class,0,0.6104795932769775
+<s>Convert the prompt to an MCP prompt.,<s>Create a new <UNK> object with the given attributes,0,-0.5695974826812744
+<s>Get a value using dictionary syntax: context[key],"<unk>
+ * @param {string} id The id of the element to be deleted",0,0.22201260924339294
+"<s>Returns an MSA containing just the query sequence, never errors.",<s>Get the current user s current password,0,0.0015903711318969727
+<s>Feedback of web search to agent.,"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.06191159784793854
+<s>Map entity network using notes and basic info,<s>Map a single entity to a single entity,0,0.13000650703907013
+<s>Initialize the KV cache in all workers.,<s>Initialize the cache for the given number of GPU blocks,0,0.8792853355407715
+<s>Build service characteristics for Amazon Keyspaces.,<s>Create a new instance of the given class,0,0.7627332210540771
+<s>Returns a string with the object's config and run time state,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.046846069395542145
+<s>Return consistent browser options dictionary for both sync and async methods,<s>Returns a list of all available camo users,0,-0.09122628718614578
+<s>Dimensions must be a multiple of 64 otherwise a GGML_ASSERT error is encountered.,"<unk>
+ * @param <T> the type of the element that is the result of",0,0.574146568775177
+<s>Fixture for a CodeExecutorContext with some pre-populated data.,<s>Create a context with a given number of arguments,0,0.5882816314697266
+<s>Format a comment body with code snippet and suggestion if provided.,"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+	<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.04804996773600578
+<s>Save credentials to file.,<s>Save the current user s configuration,0,0.7824227809906006
+<s>Extracts JSON from markdown-formatted response.,<s>Create a new instance of the given class,0,-0.3097972273826599
+"<s>Retrieves the first head_bytes bytes (1 MB by default) from the S3 object using a range request, and extracts the first response record's target URI from the HTTP headers.","<unk>
+    public void testMethod1()<unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.8483738303184509
+<s>Get the weather for a given city.,"<unk>
+		return true if the input is a valid color",0,0.2414957880973816
+<s>Simulate benchmark evaluation with predefined scores.,<s>Create a new instance of the given class,0,-0.21045950055122375
+<s>Adjust the log level to above level,<s>Create a new logger with the given name,0,0.7663512825965881
+<s>Convert pandas Series/DataFrames to primitive Python types,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.6030935645103455
+<s>Format the final solution,<s>Format a string as a list of tuples,0,0.3489294648170471
+<s>Get Secret Manager client and project ID based on environment.,<s>Create a new instance of the given class,0,0.368355929851532
+<s>Get basic information about the dataset.,<s>Get the current time in seconds,0,-0.3922126293182373
+<s>Converts batch object to dictionary.,<s>Get the current time as a string,0,0.04359741881489754
+<s>Check if query is eligible for fast track processing,<s>Returns true if the user is allowed to access this,0,0.6848439574241638
+<s>Get the price per token for a specified model.,<s>Get the value of a field in a class,0,0.12829774618148804
+<s>Get research tools based on configuration,"<unk>
+ * @param <T> the type of the value",0,-0.23144327104091644
+<s>Generate sub-queries based on initial search results and the main query.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2784687876701355
+<s>Load MCP server configuration from JSON file,<s>Create a new instance of the given class,0,0.5005391240119934
+<s>Get all setting types,"<unk>
+    public void testMethod1() {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.4245679974555969
+<s>Disables custom attention processors and sets the default attention implementation.,<s>Get the current time as a string,0,0.227909117937088
+<s>Sets the current state of the job with transition constraints.,<s>Set the current job state to the given value,0,0.9050774574279785
+"<s>If you want to hash identifier in your storage system, use this safer","<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.5787351131439209
+"<s>We noticed that sometimes if the task includes specific formatting instructions, they may interfere with the reasoning flow.","<unk>
+    public void testGetSet() {
+        assertEquals(0, this.<unk><unk><unk><unk>",0,0.0761469304561615
+"<s>Check that a dictionary item has at least 'name', optionally 'arguments' and no other keys to match a tool call JSON","<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.2558477520942688
+<s>Update the dispatch mode.,"<unk>
+ * @param {Object} options Options object",0,0.19531844556331635
+<s>Handle content updates from the assistant.,"<unk>
+
+    function get_function_name() {
+
+<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.0943140983581543
+<s>Add a prompt to the manager.,"<unk>
+ * @param {Object} options Options object",0,0.5471876263618469
+<s>Create and save comprehensive visualizations of the optimization results.,<s>Create a new visualization with a given name,0,0.9035758972167969
+<s>Compute different similarity metrics between embeddings,<s>Compute the similarity of two text files,0,0.565479040145874
+<s>Delete all audio files from the outputs directory.,<s>Test that the <UNK> property is correctly set when the,0,-0.6739648580551147
+<s>Creates a log file and logging object for the corresponding session ID,<s>Create a new logger with a given name,0,0.9424982666969299
+<s>Convert all python files in agent/prompts to json files in agent/prompts/jsons,<s>Create a new instance of the given class,0,0.05541326105594635
+<s>Create a text/markdown component.,"<s><UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<",0,-0.026889847591519356
+<s>Set up test fixtures.,<s>Create a new <UNK> instance with the given <UNK>,0,0.20929014682769775
+<s>Apply self-imposed rate limiting between requests,<s>Get the current time in UTC,0,0.8938745260238647
+<s>Completely remove existing Alembic configuration including versions.,<s>Get the current time in milliseconds,0,-0.42436566948890686
+<s>Creates a new custom calendar in Google Calendar.,"<unk>
+ * @param <T> the type of the element in the array",0,-0.516018271446228
+<s>Separate the config into create_config and extra_kwargs.,"<unk>
+ * @param <T> Type of the object that is returned",0,0.09067332744598389
+<s>Format server information for display to planners,<s>Get the value of a field,0,0.004670793190598488
+<s>Format a question for the benchmark dataset,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.20472221076488495
+<s>Get tool by key.,"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.445689857006073
+<s>Serialize object in a stable way for hashing.,<s>Create a new instance of the given class,0,-0.2188374549150467
+<s>Register the MCP tools used by this controller.,<s>Register a new tool,0,0.9739108085632324
+<s>Convert milliseconds to ASS timestamp format (H:MM:SS.cc),<s>// This is a very simple test of the <UNK> class,0,0.542374312877655
+<s>Retrieve the configuration for a given model version.,"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.06175008416175842
+"<s>Retrieve the Cortex Search Service (database, schema, service) to use from the configuration, or raise an error.",<s>Get the current system time as a tuple,0,-0.04034069925546646
+<s>Save the current Faiss index + metadata to disk so it can persist across runs.,<s>Get the current time in seconds,0,-0.13426268100738525
+<s>Convert a JSONL file to a CSV file.,"<s><UNK>
+
+<UNK>
+
+<UNK>
+<unk><unk>",0,-0.11725364625453949
+<s>Apply masking to all values in nested structure.,<s>Create a list of dictionaries with nested lists,0,0.6285675764083862
+<s>Decorator to mark APIs as deprecated.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.033259451389312744
+<s>Initialize the service with browser-compatible components,<s>Create a new instance of the given class,0,0.7309798002243042
+<s>Format Wayback Machine timestamp into readable date,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.4473186433315277
+<s>Get the actual skill states for a given skill category by importing its module.,<s>Get all available skills,0,0.8455051779747009
+<s>Handle progress updates from the strategy.,"<unk>
+		return true;
+	}
+
+	public boolean isWellFormed() {
+	<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.4863315522670746
+<s>Override that uses the local get_llm with database access.,"<unk>
+		return true;
+	}
+
+	public boolean isOverloaded() {
+		return false;
+	}
+
+	public boolean isOverloaded(boolean<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.5373531579971313
+"<s>Convert to dictionary, including document_id",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.24679958820343018
+<s>Decorator to mark a method as an MCP tool for later registration.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.15439319610595703
+<s>Convert a 32-character OpenTelemetry trace ID to a UUID-like format.,"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {<unk><unk><unk><unk><unk><unk><unk>",0,-0.32182979583740234
+<s>Get the Azure Search endpoint configuration from CONFIG,<s>Get the current time in UTC,0,-0.45442864298820496
+<s>Save the full results to a JSON file for analysis.,<s>Create a list of all possible positions of a given,0,-0.1374615728855133
+<s>Create a mock httpx.AsyncClient.,<s>Get the current date and time as a string,0,0.07053669542074203
+<s>Log workflow execution steps for debugging,"<unk>
+		return true;
+	}
+
+	public boolean isOverloaded() {
+		return false;
+	}
+
+	public boolean isOverloaded(int i) {
+<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.1947077065706253
+<s>Generate embedding for app.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.14796456694602966
+<s>Get the current OS name in the same format needed for browserforge :return: Current OS name or `None` otherwise,"<unk>
+
+    def test_get_value_from_array_with_empty_value",0,-0.14190644025802612
+<s>Context manager exit: stop timing and log results.,"<s><div class=""form-group"">
+<label class=""control-label"">Select a country</label>
+<unk>",0,-0.11506685614585876
+<s>Create a new directory for the current turn.,<s>Create a new turn directory,0,0.8828369975090027
+<s>Copy the StreamInfo object and update it with the given StreamInfo instance and/or other keyword arguments.,"<s>
+ * This is a simple example of a function",0,-0.5259349346160889
+<s>Writes processed inference result to a directory.,<s>Write a file with a list of examples,0,0.9516949653625488
+<s>Support selecting attribute values using ::attr() pseudo-element,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.07058066129684448
+<s>Return the corresponding torch attribute based on the device type string.,"<unk>
+ * @param {string} text
+ * @param {string} color
+ * @param {number} x
+ * @param {number} y
+ * @param {number} width
+ * @param {number} height
+ * @param {number} x1
+ * @param {number} y1
+ * @param {number} x2
+ * @param {number} y2
+ * @param {number} color
+ * @param {number} x
+ * @param {number} y
+ * @param {number} color
+ * @param {number} x1",0,-0.8233972787857056
+<s>Initialize the KV cache in all workers.,<s>Initialize the cache for the given number of GPU blocks,0,0.8792853355407715
+<s>Returns a string with the object's config and run time state,<s>Get the current time in UTC,0,-0.010670488700270653
+<s>Convert the query response to a dictionary.,<s>Get the current time as a string,0,-0.2957910895347595
+<s>Extract URLs from a JSONL file.,<s>Extract all URLs from a JSON file,0,0.9869316220283508
+<s>Generate HTML for status indicator.,"<unk>
+		return new String(buffer, 0, length);
+	}
+
+	/**
+	 * Returns a new string with the given length",0,0.2109975516796112
+"<s>Get the port to listen on, using config or environment.",<s>Create a new instance of the given class,0,0.11334776878356934
+<s>Parse the rules file and organize rules by PDF.,<s>Create a new instance of the given class,0,0.07998180389404297
+<s>Download a file from a URL and save it to the cache directory.,<s>Get the current time in seconds,0,-0.494413286447525
+<s>Note that here we only asks execute_all and execute_rank_zero to be implemented,"<unk>
+		return true if the input is a valid URL",0,-0.366582989692688
+<s>Initialize the mock Auth0 instance.,<s>Get the current time as a string,0,-0.2784610986709595
+<s>Recreate a collection in Qdrant,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.13520145416259766
+<s>Convert response to dictionary format,<s>Create a new instance of the given class,0,-0.20884215831756592
+"<s>Fetches a random fact from the ""uselessfacts.jsph.pl"" API.","<unk>
+ * @param {Object} options Options object",0,-0.48571252822875977
+<s>Fetch the maximum batch size from the Triton model configuration in a thread-safe manner.,<s>Returns the maximum batch size for a model,0,0.893569827079773
+<s>Creates a text response for testing.,<s>Create a new instance of the given class,0,-0.5034448504447937
+<s>Create instance from dictionary,"<unk>
+ * @param <T> the type of the elements of the array",0,0.4146140217781067
+"<s>Searches for a JSON object within the string and returns the loaded JSON if found, otherwise returns None.","<unk>
+		return true;
+	}
+
+	public boolean isShowing() {
+		return<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.40130123496055603
+<s>Create a openai vector store for gpt assistant,<s>Create a new vector store,0,0.7136733531951904
+"<s>Get configuration for a specific model, with fallback to defaults.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2548644542694092
+"<s>Checks if a string is in a valid resolution format (e.g., ""1024x768"").",<s>Test the <UNK> function,0,0.15704432129859924
+<s>Create a new item.,"<unk>
+		return true;
+	}
+
+	public boolean isOverloaded() {
+		return true<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.24243475496768951
+<s>Create a ScheduleSampler from a library of pre-defined samplers.,"<unk>
+ * @param {string} str
+ * @param {string} str2
+ * @returns {boolean} true if str1 is a substring of str2",0,-0.2546718716621399
+<s>Compare configured window size with actual size and report differences,<s>Validate that the given window size is within the,0,0.8639345765113831
+<s>Clean up GPU and CPU memory to prevent VRAM overflow during multiple generations.,<s>Create a new instance of the given class,0,-0.0370139479637146
+<s>Load the model into   /dev/shm   to make the process of loading the model multiple times more efficient.,<s>Copy a file from one location to another,0,0.9635328054428101
+<s>Parses a JSON string and returns a dictionary.,<s>Create a new instance of the given class,0,-0.6115748882293701
+<s>Class method to create a new Vocos model instance from a pre-trained model stored in the Hugging Face model hub.,<s><UNK> to <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.11728441715240479
+<s>Adds legal comment at the top of the mmCIF.,<s>Create a new instance of the given class,0,0.45632055401802063
+<s>Parse datetime from Microsoft Graph API format.,<s>Parse a string as a date time or a time zone,0,0.9937285780906677
+<s>Get authentication headers for OpenSearch requests.,<s>Get the current time in seconds,0,0.04232308268547058
+<s>Configure loguru logger with custom formatting,<s>Get the current version of the <UNK> <UNK>,0,0.04797980189323425
+<s>Convert to a dict for submission to redis,"<unk>
+		return true if the given string is a valid IP address",0,0.029359441250562668
+<s>Get a dictionary mapping topic names to their descriptions.,"<unk>
+		return true;
+	}
+
+	public boolean is_valid() {
+		return<unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.40610527992248535
+<s>Press a hotkey combination,"<unk>
+    public function testGetSet()
+    {
+        $this->assertEquals(1, $this->getSet()->get('a'));
+        $this->assertEquals(2, $this->getSet()->get('b'));
+    }
+
+    public function<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.18601439893245697
+<s>Close connections that have been idle for longer than the timeout.,<s>Returns true if the user is in a valid state,0,0.45180413126945496
+<s>Recursively builds the agent tree.,<s>Create a tree of nodes with a given ID,0,0.38482552766799927
+<s>Return a dictionary containing name to a shape and dtype.,<s>Get the current time in UTC,0,-0.0459294430911541
+"<s>Safely read a file, returning None if it doesn't exist or on error.","<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.23386460542678833
+<s>Initializes the MCP client.,<s>Get the current version of the <UNK> <UNK> <UNK>,0,0.1314481943845749
+<s>Fix permissions for Chrome user data directory,<s>Fix permissions on Windows by default,0,0.8984955549240112
+<s>progressive init strategy (with noise),<s>Create a progressive model,0,0.8160099387168884
+<s>Build the refinement prompt for the optimizer,"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == this) {
+			return true;
+		}
+
+<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.0496426522731781
+<s>Extract Python code blocks from text.,<s><% if (<unk><unk>,0,0.13654452562332153
+<s>Check and install required dependencies,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.3306843042373657
+<s>Very rough gauge: a wall of recent negative headlines can be a *positive* for a contrarian.,<s>Analyze the given text and return a dictionary,0,0.3110528290271759
+"<s>n=4, no sep:             '(a (a (a (a)?)?)?)?' - n=4, sep=',', prefix:    '("","" a ("","" a ("","" a ("","" a)?)?)?)?' - n=4, sep=',', no prefix: '(a ("","" a ("","" a ("","" a)?)?)?)?'",<s>Get the current version of the <UNK> <UNK> <UNK>,0,0.1601598858833313
+"<s>Comment out magic commands, shell commands, and direct execution commands in the script content.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.004090704023838043
+"<s>Converts an OmegaConf object to native types (dicts, lists, etc.)",<s>Create a list of all the possible values of a,0,0.5266035795211792
+<s>List all fail conditions for the current project's deployments.,<s>Get the current time as a string,0,-0.034358322620391846
+<s>Return a list of mutating keywords found in the SQL (excluding comments).,<s>Get the list of all the <UNK> <UNK>,0,0.1765659600496292
+<s>Generate a trace filename based on the path settings.,<s>Get the current time as a string,0,-0.2648877501487732
+<s>Load the prompt template from the markdown file.,<s>Create a new instance of the given class,0,0.22071026265621185
+<s>Custom serialization that properly uses AgentHistory's model_dump,"<unk>
+		return true;
+	}
+
+	public boolean isWifiConnected() {
+		<unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.44747987389564514
+<s>Check if directory should be ignored.,"<unk>
+ * @param <T> the type of the value",0,-0.3907305896282196
+<s>Use AudioSegment to load audio from all supported audio input format,"<unk>
+		return true if the input is a valid value for this field",0,-0.5860046744346619
+<s>Print equivalent curl command for debugging.,"<unk>
+		return true;
+	}
+
+	public boolean isOver(int x, int y) {
+		<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.23013781011104584
+<s>Log which conversion capabilities are available.,<s>Create a new instance of the given class,0,0.17132249474525452
+<s>Load OpenAI voice and model mappings from JSON,<s>Create a new instance of the given class,0,0.22404107451438904
+<s>Returns the generated PyDoc string.,<s><UNK> to <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.156629741191864
+<s>Get the currently active MCP server.,<s>Get the current time in UTC,0,0.18578633666038513
+<s>Load images from directory,<s>Load images from a directory,0,0.9792072772979736
+<s>Create sample document chunks for testing,"<s>
+
+
+
+<unk>",0,-0.24342258274555206
+<s>Update internal state dictionary with cleaned component values.,<s>Update the state of a component,0,0.9806973338127136
+<s>Initialize and run the paper summarization agent.,<s>Create a new instance of the given class,0,-0.3053849935531616
+<s>Collects the state dict and dump to disk.,"<s>
+
+
+
+<unk>",0,0.5595514178276062
+"<s>Load the model from the given model path (normally GGUF, GGML)",<s>Load a model from a file,0,0.7528560161590576
+<s>Switch to a different application that is already open,<s>Get the current version of the <UNK> <UNK>,0,0.5582631826400757
+"<s>Merge existing and new data, avoiding duplicates based on a key field.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.15229745209217072
+<s>Checks if a given Hub revision exists.,<s>Check if the hub is up and running,0,0.6397498846054077
+<s>Updates the session state based on the event.,"<unk>
+    public void testGetSet() {
+<unk><unk><unk><unk><unk>",0,0.23994332551956177
+<s>(Experimental) Restart the code executor.,"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.18629364669322968
+<s>Calculates the FID of two paths,"<s>
+
+
+
+<unk>",0,0.513359010219574
+<s>Note that this operation is in-place,"<unk>
+ * @param {string} type The type of the field",0,-0.10572217404842377
+<s>Update macOS Platform UUID,<s>Update the UUID of the current machine,0,0.8781729340553284
+<s>Converts a QueryRequest instance into a QueryParam instance.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5949269533157349
+<s>Process a single audio file by checking its existence and extracting duration.,"<s><UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<",0,0.22840750217437744
+<s>Creates a BigQuery dataset if it does not already exist.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5267439484596252
+<s>Get color for a node type to match the UI color scheme.,<s>Get the color of a node,0,0.9724894762039185
+<s>Sample fake chunks for testing retrieve_chunks,<s>Get the current locale s language code,0,0.20111475884914398
+<s>Synchronous implementation of search_by_url for thread execution,<s>Get the list of all links in the database,0,0.7158707976341248
+"<s>Get all pages from the document files for processing, preserving file and line order.",<s>Get all pages from a list of paths,0,0.9474536180496216
+<s>Decrypt base64-encoded ciphertext with XOR.,<s>Get the value of a field in a list,0,0.4091533422470093
+<s>Store a conversation turn in memory.,<s>Store the current conversation in the database,0,0.9432599544525146
+<s>Get the vocabulary dictionary mapping characters to token IDs,<s>Returns a dictionary of vocabulary symbols to their integer value,0,0.8910897374153137
+<s>Saves settings to the JSON file.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.14750976860523224
+<s>Create isolated branch for every sub-agent.,"<unk>
+ * @param <T> the type of the elements of the array",0,-0.1573760211467743
+<s>Provide LLM context for tables.,<s>Create a list of tables from a list of tables,0,0.7912676334381104
+<s>Generate and return a summary of the benchmark results.,<s>Create a new instance of the given class,0,-0.3112345337867737
+<s>run a shell command and optionally assert success.,<s>Create a new instance of the given class,0,0.18276219069957733
+<s>Resolves a single $ref string.,"<unk>
+ * @param {string} id The id of the item to be deleted",0,0.32563987374305725
+<s>Turns a specific light on (true) or off (false) using phue2.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.6964949369430542
+<s>List files and directories under CONTEXT_PATH/relative_path.,<s>Create a new instance of the class <UNK>,0,0.4631357491016388
+<s>Process a single query in parallel.,<s><s><<unk>,0,-0.10390035808086395
+<s>Transform raw project data into a JiraProjectEntity.,<s>Create a new project object,0,0.8646684288978577
+<s>Generate a formatted context string describing all intents,<s>Generate a context for a given type,0,0.8758243322372437
+<s>Create a SourceConnection from a source_connection ORM model.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.18185967206954956
+<s>Replace {agentlist} placeholder before validation/assignment.,"<unk>
+ * @param {string} type The type of the field",0,0.06495998054742813
+<s>Class method to create a new Vocos model instance from a pre-trained model stored in the Hugging Face model hub.,<s>Create a new instance of the given class,0,0.042950697243213654
+<s>Convert an MCP tool result to an LLM input type,<s>Convert a call to a <UNK> object,0,0.6635435819625854
+<s>Loads custom model-specific settings,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5480285286903381
+<s>Get the latest review for shopping admin.,<s>Create a new instance of the given class,0,-0.4657750725746155
+<s>Initialize the OCR processor.,<s>Create a new instance of the given class,0,0.27513521909713745
+<s>Create a PKCE challenge with code_verifier and code_challenge.,<s>Create a new <UNK> object with the given attributes,0,-0.9094846248626709
+<s>Add a tool to the server.,<s>Returns a list of all the <UNK> <UNK>,0,0.08623722940683365
+<s>Clean up all temporary files including part working directories,<s>Get the current time as a string,0,-0.323225200176239
+<s>Print full validation details for a single file.,<s>Create a new instance of the given class,0,-0.5478312969207764
+"<s>Get the API key, prioritizing agent config then system config.",<s>Get the current user s <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5174750089645386
+"<s>Analyzes the given text as instructed, and returns the analysis.","<unk>
+    public static void main(String args[]) {<unk><unk><unk><unk><unk><unk><unk>",0,0.5229285359382629
+<s>Generate a path for saving the final DataFrame.,<s>Get the current time in milliseconds,0,-0.5148483514785767
+<s>Automatically prepend timestamp to migration filenames.,"<unk>
+    return true;
+}
+
+bool IsInSet(int a, int b) {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.04592746123671532
+<s>Returns the MSA profile and deletion_mean features.,"<unk>
+ * @param {string} type The type of the field",0,-0.20662720501422882
+<s>Mark a subscription as deleted by Stripe subscription ID.,<s>Delete a subscription by its ID,0,0.9793115854263306
+<s>Collects the state dict and dump to disk.,"<s>
+    def test_method_1<unk><unk><unk><unk>",0,-0.3260132074356079
+<s>Custom error messages for exception,<s>Test that the <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.21977141499519348
+<s>Save image data to a file.,<s>Get the image data from the given image data,0,0.7603569626808167
+<s>Set up test fixtures.,<s>Create a new <UNK> instance with the given <UNK>,0,0.34367698431015015
+<s>Called by ExternalRayDistributedExecutor collective_rpc.,"<unk>
+		return true;
+	}
+
+	public boolean isShow() {
+		return<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.5999497175216675
+<s>Visualize a scroll action by drawing arrows on the screenshot.,<s>Get the current time as a string,0,0.07234924286603928
+<s>Convert retrieval results to formatted string.,<s>// This is a test for the <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.04894758760929108
+<s>Format search results in a consistent format.,<s>Get the current time in seconds,0,-0.20177775621414185
+<s>Control initial session with OpenAI.,"<unk>
+    }
+
+    public void testMethod1()<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.027788065373897552
+<s>Check if the file extension is supported.,"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.14160676300525665
+<s>Generates HTML with differences between strings a and b.,<s>Returns a string that represents the diff between two,0,0.825959324836731
+<s>Get basic information about the dataset.,<s>Create a new instance of the given class,0,-0.2676461637020111
+<s>Builds the Docker image.,<s>Create a new image with the given name,0,0.8354172706604004
+<s>Create a node with relevance information,"<unk>
+ * @param [in]  p_p_p_p_p_p",0,0.31139039993286133
+<s>Get the speaker selection result.,<s>Create a new instance of the given class,0,-0.1390456259250641
+<s>Convert a file URI to a local file path,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.735727846622467
+<s>Check if the file is a video file.,"<unk>
+ * @param <T> the type of the element that is the",0,-0.4271642565727234
+"<s>Get context, with graceful fallback to global context if needed.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.15994884073734283
+<s>Return the standard system message for Morphik's query agent.,"<unk>
+    public void testGetSet() {
+        assertEquals(0, this.get<unk><unk>",0,-0.35272669792175293
+<s>Format a step result for display to planners,<s>Get the current time in UTC,0,0.12268748879432678
+"<s>Replaces the domain (and port, if applicable) of the presigned URL with that of the base URL only if the base URL contains 'localhost' or an IP address.",<s>Update the URL of the current browser,0,0.9432423710823059
+<s>Generate a list of audio file paths,"<s>
+
+
+
+
+<unk>",0,-0.10713203251361847
+<s>Produce a new ModelSettings by overlaying any non-None values from the override on top of this instance.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.07893982529640198
+<s>Generate new machine ID,<s>Generate a new ID,0,0.7026777267456055
+<s>Format child page and database blocks.,"<unk>
+    public static void main(String args[]) {<unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.18007409572601318
+<s>Load IOI tests for a given year.,<s>Create a new instance of the given class,0,-0.12447163462638855
+<s>Get DeepSeek Azure API version from config,<s>Get the current version of the <UNK> <UNK>,0,0.5471438765525818
+<s>update status as failed,<s>Get the current user s language,0,-0.6106311678886414
+<s>Check if URI matches template and extract parameters.,"<unk>
+		return true;
+	}
+
+	public boolean isShowing() {
+		return<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.39788103103637695
+<s>Only retry if the exception is not CancelledError and the attempt failed.,<s>Create a new instance of the given class,0,-0.08698469400405884
+<s>Validate that no values are dictionaries (depth 0).,"<unk>
+ * @param <T> the type of the element that is the result of",0,0.723223865032196
+<s>Assumes the model is either prompted to emit \boxed{answer} or does so automatically,"<unk>
+
+    return new QWidget(QWidget::QWidget);
+}",0,0.16338838636875153
+<s>Get the Gradio app code.,"<unk>
+ * @param {string} type The type of the field",0,0.1874295026063919
+<s>Convert DTO to dictionary,<s>Returns a list of all the nodes in the graph,0,-0.2371620088815689
+<s>Create a Configuration instance from a RunnableConfig.,<s>Create a new instance of the given class,0,0.8558640480041504
+<s>Calculate SHA1 hash of the equation string and rendering parameters.,<s>Test that the <UNK> property works as expected,0,0.15424112975597382
+"<s>Compute the mean and variance of the diffusion posterior: q(x_{t-1} | x_t, x_0)",<s>Compute the posterior mean and posterior variance for a given,0,0.9836174845695496
+"<s>Convert time (in seconds) to the format: hours:minutes:seconds,milliseconds",<s>Test that the <UNK> field is correctly set,0,0.24055466055870056
+<s>Save the report to a file.,"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.011879317462444305
+<s>Initialize the KV cache in all workers.,<s>Initialize the cache for the given number of GPU blocks,0,0.8857242465019226
+<s>Provide a transactional scope around a series of operations.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.8680723905563354
+<s>Get processor before ensuring initialization,"<unk>
+ * @param {string} type The type of the field",0,-0.34624168276786804
+<s>Roll out the agent using teacher forcing actions,<s><% if (<unk>,0,-0.10300523042678833
+<s>Show a platform-specific permission dialog and return True if approved.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.37499433755874634
+<s>Creates the arguments we will use while launching playwright's browser,<s>Get the current time in UTC,0,-0.30406808853149414
+<s>Strip markdown fences and extract the first JSON object.,"<unk>
+		return true;
+	}
+
+	public boolean isShowing() {
+		return showing;<unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.24457493424415588
+<s>Make request and print raw response,"<s>// Copyright (c) 2012 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD license that can be
+// found in the LICENSE file",0,-0.2729019820690155
+"<s>Merge audio files, add a brief silence",<s>Merge two sorted arrays,0,0.6030223965644836
+"<s>Pop the topmost context off the stack, ending dependency tracking for the current atom.",<s>Create a new instance of the given class,0,0.2927943170070648
+<s>Remove the obsolete checkpoints that exceed the save_limit.,<s>Remove obsolete checkpoints,0,0.5923131704330444
+<s>Get the Qdrant endpoint configuration from CONFIG,<s>Get the current time as a string,0,-0.5226155519485474
+<s>Collects the state dict and dump to disk.,<s>// This is a very specific example of a function,0,-0.4827181100845337
+<s>Validates the fold input contains MSA and templates for featurisation.,<s>Create a new <UNK> object with the given attributes,0,-0.15804126858711243
+<s>Get an UnrealSpeech skill by name.,"<unk>
+
+    def test_get_value_from_array_type",0,0.25202280282974243
+<s>Convert money expressions to spoken form,"<s>Convert a string like ""1 2 3 4 5 6 7 8 9 10 11",0,0.8445662260055542
+<s>Press a hotkey combination,"<unk>
+		return true;
+	}
+
+	public boolean isOverloaded() {
+		return false;<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.3129086494445801
+<s>Print the model size.,"<unk>
+ * @param {Object} options
+ * @param {Object} options.type
+ * @param {Object} options.data
+ * @param {Function} callback
+ * @param {Function} callback.onerror
+ * @param {Function} callback.onsuccess
+ * @param {Function} callback.onerror
+ * @param {Function} callback.onsuccess
+ * @param {Function} callback.onerror
+ * @param {Function} callback.onsuccess
+ * @param {Function} callback.onerror",0,-0.16128131747245789
+<s>Read text content from a PDF file.,<s>Create a new instance of the given class,0,-0.3387185335159302
+"<s>Sanitize and format input data, including handling of nested lists and dictionaries.",<s>Create a new instance of the given class,0,0.1645122617483139
+<s>Caches all S3 paths in the dataset to the local cache directory.,<s>Get the current date and time from the date and time,0,-0.28231215476989746
+<s>Provide a mock response fixture for testing.,"<unk>
+    }
+
+    public void testGetSet() {
+        assert<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.22324958443641663
+<s>Creates a fasta file with the sequence with line width limit.,"<unk>
+		return true;
+	}
+
+	public boolean isWifiConnected() {
+		return<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.46682417392730713
+<s>Start the logger and return the session_id.,"<unk>
+    public void testGetSet() {
+        assertEquals(0, this.getSet().get<unk>",0,-0.32731708884239197
+<s>load configurations based on the given prefix.,"<s><UNK>
+
+<UNK>
+<unk><unk>",0,-0.5830569267272949
+<s>Write content to a file with the specified filename.,"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+	<unk><unk><unk><unk><unk><unk><unk>",0,0.17623034119606018
+<s>Return usage summary of the response using RESPONSE_USAGE_KEYS.,"<unk>
+		return true;
+	}
+
+	public boolean isOver(int x, int y) {
+		return<unk><unk><unk><unk><unk><unk><unk>",0,-0.23883946239948273
+"<s>When a Connection is deleted, also delete its IntegrationCredential if present.",<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5476422309875488
+<s>Analyze a JSONL file containing  markup and return all types found with counts,<s>Create a new instance of the given class,0,0.14372743666172028
+<s>Create a default configuration file if none exists,<s>Create a new config file,0,0.9002636671066284
+<s>Stop all services after tests.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>,0,0.0038319677114486694
+<s>Calculates the FID of two paths,"<s>
+
+
+
+<unk>",0,0.5075581669807434
+<s>Combine coverage data from subprocesses at the end of the test session.,<s>Create a new instance of the given class,0,0.05169939622282982
+<s>Build the parameter buffer in each pp rank,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.47305309772491455
+<s>Preprocess MMMU dataset to reformulate open questions to multi-choice ones.,"<s>
+
+
+
+<unk>",0,0.35381636023521423
+<s>Ensure expected_output is a dictionary,"<unk>
+		return true;
+	}
+
+	public boolean isShowing() {
+	<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.3545346260070801
+<s>Get the latest recording and trace files,<s>Get the latest version of a file,0,0.9166629314422607
+<s>Execute code in E2B sandbox and return the result.,"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == this) {
+			return true;
+		}
+
+		if (obj instanceof String) {
+			return<unk><unk><unk><unk><unk>",0,-0.310393363237381
+<s>Convert a trajectory to formatted text.,<s><UNK> to <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.33871135115623474
+<s>Get basic information about the dataset.,"<unk>
+		return true if the input string is a valid IP address",0,0.031575724482536316
+<s>Disconnect from the currently active MCP server.,<s>Get the current time as a string,0,0.32528167963027954
+<s>Register a handler for a signal.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.3863039016723633
+<s>Downloads a pre-trained Sana model from the web.,"<s><UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<",0,-0.2638753652572632
+<s>Appends or overwrites search results to a JSON file.,<s>// This is a test of the <UNK> <UNK> <UNK> <UNK>,0,-0.7179275751113892
+<s>Add a new knowledge base ID.,"<unk>
+		return true;
+	}
+
+	public static boolean isWifiConnected() {
+		return<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.22271209955215454
+<s>Get branding config with logo and favicon as data URLs,<s>Get the current user s configuration,0,0.8700376152992249
+<s>Analyze dimensions and statistics of a voice tensor.,<s>Analyze a voice file,0,0.87324059009552
+<s>Fixture to provide the path to the test PDF file,"<unk>
+ * @param {string} type The type of the event",0,-0.37855803966522217
+<s>Download the dataset into self.data_dir using huggingface datasets.,<s>Download a dataset from a <UNK> <UNK> <UNK> <UNK>,0,0.741424560546875
+<s>Minimal simulation of processing the input data.,"<unk>
+		return true;
+	}
+
+	public boolean isWellFormed() {
+		return isWellFormed<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.30401039123535156
+<s>find the RateLimitMiddleware instance in the middleware stack,"<unk>
+ * @param {string} text
+ * @param {number} [start]
+ * @param {number} [end]
+ * @param {string} [type]
+ * @param {string} [color]
+ * @param {string} [font]
+ * @param {string} [fontFamily]
+ * @param {string} [fontSize]
+ * @param {string} [fontWeight]
+ * @param {string} [fontStyle]
+ * @param {string} [fontVariant]
+ * @param {string} [fontVariant]
+ *",0,-0.7130643725395203
+<s>Store tools and process to decision node,<s>Get the current version of the <UNK> <UNK> <UNK>,0,-0.45632731914520264
+<s>Plot total conversation time per provider and save to file.,<s>Plot a single line with a given color,0,0.6140876412391663
+<s>Extract tool calls from a trajectory,<s>Create a new instance of <UNK> with the given attributes,0,0.3072943091392517
+<s>Close the Milvus connection.,<s>Returns a list of all the nodes in the graph,0,-0.6920290589332581
+<s>Log validation generation to mlflow as artifacts,<s>Get the current time as a string,0,0.3280593156814575
+<s>Register error handlers with the Flask app.,<s>Get the current time in seconds,0,0.35853201150894165
+<s>Print a formatted summary of timing information.,"<s>#include <stdio.h>
+#include <stdlib.h>
+#<unk><unk><unk><unk><unk><unk><unk>",0,0.57144695520401
+<s>Generate Cursor checksum from token using the algorithm,<s>Generate a cursor checksum,0,0.7424026727676392
+<s>Get the screen size.,<s>Create a new instance of the given class,0,-0.7106040716171265
+<s>Generate sub-questions based on the topic.,<s>Create a new instance of the given class,0,-0.040751755237579346
+<s>Checks the status of the main hub and connections.,<s>Returns a list of all the nodes in the graph,0,-0.7194870710372925
+<s>Creates a tool result message for testing in Google's format.,<s>Create a new <UNK> object with the given attributes,0,-0.5850176811218262
+<s>Merges a list of tensors based on their DTensor placement,"<unk>
+    return true;
+}",0,0.18474134802818298
+<s>Simple qualitative analysis of recent news.,"<unk>
+		return false;
+	}
+
+	return true;
+}
+
+bool CBaseEntity::GetEntityType() const
+{
+	return m_entityType;
+}",0,0.02070227637887001
+<s>Encode image to base64,"<s>
+
+
+
+
+<unk>",0,-0.16388067603111267
+<s>Save raw response data (including logprobs) to a separate file.,<s>Save a list of responses to a given problem,0,0.7818171977996826
+<s>Note that here we only asks execute_all and execute_rank_zero to be implemented,<s>Get a list of all the <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.27868345379829407
+<s>Use deepseek api to generate text.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.37867558002471924
+<s>Copy old config window_width & window_height to window_size.,<s>Copy of <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.2890651822090149
+<s>Prepare request for batch_get_documents endpoint,"<unk>
+ * @param <T> the type of the element that is stored",0,0.17564967274665833
+<s>Starts automatic cleanup task.,"<unk>
+    public function testGetSet()
+    {
+        $this->assertEquals(1, $this->getSet()->get('a'));
+        $this->assertEquals(2, $this->getSet()->get('b'));
+    }
+
+    public function<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.3825450539588928
+<s>The file agent is a special agent for file operations.,<s>Create a new instance of the given class,0,0.5334773063659668
+<s>Downloads a PDF file from the specified URL.,"<unk>
+		return false;
+	}
+
+	return true;
+}
+
+bool IsInSet(const std::string& str) {
+	return<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.6634524464607239
+<s>Load all JSONL files from the input directory.,"<unk>
+ * @param {string} type The type of the field",0,0.22205020487308502
+<s>Fixture that creates a FastMCP server with tagged resources and templates.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.8512759208679199
+<s>Load environment variables from .env file if it exists,"<unk>
+ * @param {string} type The type of the field",0,-0.24229709804058075
+<s>Add a single tool to the collection.,"<unk>
+ * @param {string} type The type of the field",0,-0.49023759365081787
+<s>Generate a batch of responses using the specified provider.,<s>Create a new batch with a given size,0,0.3747461438179016
+<s>Return kwargs for model initialization.,<s>Create a new instance of the given class,0,0.7639109492301941
+<s>Validate if adapter exists and is compatible,"<unk>
+    public void testMethod1() {<unk><unk><unk><unk><unk><unk><unk>",0,0.45092180371284485
+<s>Get response using LiteLLM,<s>Create a new instance of the given class,0,-0.6262496709823608
+<s>Extract Python code blocks from text.,"<unk>
+		return false;
+	}
+
+	public boolean isSecure() {
+		return secure;<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.4007711708545685
+<s>Handle message from JavaScript,"<unk>
+ * @param <T> the type of the element in the collection",0,-0.28199976682662964
+<s>Replace keys of old prefix with new prefix in state dict.,<s>Create a new instance of the class <UNK>,0,0.80759197473526
+<s>Convert MIDI note number to note name,"<unk>
+		return true if the input is a valid value for this field",0,0.26514384150505066
+<s>Draw the first `n` samples in order from the specified split.,"<unk>
+		return true;
+	}
+
+	public boolean isShowing() {
+		return showing<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.09152714163064957
+<s>Create a loggable version of messages with image data truncated.,<s>Get a list of all log messages,0,0.9128150939941406
+<s>Build documents from text chunks,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.048492155969142914
+<s>Extract all variable references ${var_name} from the expression.,"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.26990044116973877
+<s>Format repository search result as preview,<s>Create a new instance of the given class,0,0.11009003221988678
+<s>Analyze chat history and extract tool call information.,<s>// This is a test for the <UNK> <UNK> <UNK> <UNK>,0,-0.22113515436649323
+<s>Creates a log file and logging object for the corresponding task Name,<s>Create a new logger with a given name,0,0.5355320572853088
+<s>Generator that yields lines from multiple JSONL files.,"<unk>
+
+    def test_get_config_value_from_config_value",0,0.25769859552383423
+<s>Try to add the CUDA library paths to the system PATH.,<s>Returns the first available CUDA version,0,0.884964644908905
+<s>Format a single page entry as either a parenthesized path or a markdown link.,<s>Create a new instance of the class <UNK> and then call <UNK>,0,-0.546129584312439
+"<s>Parse the size string with optional suffix (KB, MB) into bytes.","<s>// Copyright (c) 2012 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD style license that",0,-0.06879102438688278
+<s>Handle signals to ensure clean subprocess termination.,"<unk>
+
+
+
+
+
+<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.43421778082847595
+<s>Print optimization results in a nicely formatted way.,"<s>#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.799315869808197
+<s>Run the stateless StreamableHTTP server.,<s>function to get the value of the input field,0,-0.6174935102462769
+"<s>Stacks polymer features, adds empty and keeps ligand features unstacked.",<s>Create a dictionary with all the possible values for a,0,0.5407359004020691
+<s>Rewrites the schema for use in SQLGlot.,<s>Get the current version of the <UNK>,0,0.8467315435409546
+<s>Get default values from config files.,<s>Create a new instance of the given class,0,0.973056435585022
+<s>Writes the input JSON to the output directory.,<s>Create a new instance of the given class,0,-0.2977954149246216
+<s>Generate audio segments for each Q&A pair.,<s>Generate a list of audio segments from a given text,0,0.8999386429786682
+<s>Format the DocumentTask as a string for the TaskManager to work with.,<s>Create a new instance of the given class,0,-0.2871342599391937
+<s>Sort agent signals in a consistent order.,"<unk>
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+<unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.5022346377372742
+<s>Log debug information if debug mode is enabled.,"<unk>
+		return true;
+	}
+
+	public boolean isOver(int x, int y) {
+	<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.002491407096385956
+"<s>Load and preprocess an image from the specified path, resizing and padding it to the target size.",<s>Load a model from a file,0,0.8504924774169922
+<s>Generate a single greedy sample with temperature=0.,<s>Create a new instance of the given class,0,-0.3885563611984253
+<s>Fetches the spec from API Hub and generates the toolset.,<s>Create a new toolset with the given name and description,0,0.8944384455680847
+<s>Add a user/assistant pair to the cache if not present.,"<unk>
+		return true if the input is a valid input",0,-0.12273426353931427
+<s>Strip markdown fences and extract the first JSON object.,"<unk>
+		return true;
+	}
+
+	public boolean isShowing() {
+		return<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.23920556902885437
+<s>Create and configure a requests session with retry capabilities,<s>Create a new session with a new <UNK> <UNK> <UNK>,0,0.7092313170433044
+<s>Convert a Discord snowflake ID to ISO timestamp string.,<s><UNK> to <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.8293313384056091
+<s>Wait for service to be healthy.,<s>Create a new instance of the given class,0,-0.2937259376049042
+<s>Creates an agent engine for Academic Research.,<s>Create a new remote agent,0,0.9740735292434692
+"<s>Set multiple arguments for the parser at once globally :param kwargs: The keywords can be any arguments of the following: huge_tree, keep_comments, keep_cdata, auto_match, storage, storage_args, automatch_domain",<s>Create a new instance of the given class,0,0.9410187005996704
+"<s>When optimizer is None, it is Reference Policy",<s>Create a new actor and set it as the current actor,0,0.6352880001068115
+<s>List default first if it exists,"<unk>
+		return true;
+	}
+
+	public boolean isShowAll() {
+	<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.3142685890197754
+<s>Return a mock session object for testing.,<s>Get the current date and time as a string,0,0.001694999635219574
+<s>Load a JSON file.,<s>Create a new instance of the class <UNK>,0,0.14793634414672852
+<s>Return the string representation of the plan.,"<unk>
+ * @param {string} type The type of the field",0,0.43672433495521545
+<s>Get the current date in the format YYYY-MM-DD,<s>Test that the <UNK> property works as expected,0,0.21819506585597992
+<s>Fetch the JSON datastore from the presigned URL.,<s>Fetch a list of <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.0914650708436966
+<s>Free up memory by garbage collection and emptying CUDA cache.,<s>Create a new instance of the given class,0,-0.04748176038265228
+<s>Add a prompt to the manager.,"<unk>
+    public void testMethod1()<unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.09670957922935486
+<s>Save the settings for this model to models/config-user.yaml,<s>Save settings in the database,0,0.9514718651771545
+<s>Returns a default usage object for testing.,"<unk>
+ * @param <T> the type of the element in the array",0,0.24715358018875122
+<s>Generate audio using OpenAI API.,"<unk>
+
+    def test_get_value_from_value_type",0,-0.036803632974624634
+<s>Get the target module where an object should be documented.,"<unk>
+		return true if the input is a valid number",0,-0.546701967716217
+<s>Ensure only graph-related fields are present.,"<unk>
+ * @param <T> the type of the element that is stored",0,0.9309813380241394
+<s>Log vectorization startup information.,"<unk>
+
+    def test_get_value_from_property_with_default_value",0,-0.6851805448532104
+"<s>Truncates text content within a list of multimodal elements, preserving the overall structure.",<s>Create a list of objects with a single property,0,0.27840983867645264
+<s>Format validation errors into a more readable string.,<s>Get a list of errors that are currently visible,0,0.8025267124176025
+<s>Checks if a given Hub revision exists.,<s>Check if the hub is up and running,0,0.6388011574745178
+<s>Calculate and save partial results for a specific agent-task pair,<s>Get the current time in seconds since the epoch,0,0.15198764204978943
+<s>Set text matrix and text line matrix,<s>Set the text color of the text box,0,0.7667589783668518
+<s>Get the metadata for a tool by its name.,<s>Get the current time in UTC,0,-0.8458960652351379
+<s>Get brancshes of the repository,<s>Create a new instance of the given class,0,0.41876623034477234
+<s>Create a Configuration instance from a RunnableConfig.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.2572411894798279
+"<s>Get a model class, first by model name, then by task type.",<s>Create a new instance of the given class,0,0.3591900169849396
+<s>Format sources with numbers for citation.,"<unk>
+		return true;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == this) {
+			return true;
+		}
+		if (obj instanceof User) {
+			User user = (<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.5194849967956543
+<s>Compile dataset C++ code.,"<s><div class=""form-group"">
+<label class=""control-label"" for=""example<unk>",0,0.03835161030292511
+<s>Crawl website starting from base_url,<s>Get the current time in seconds,0,-0.5135592222213745
+<s>Strip markdown fences and extract the first JSON object.,"<unk>
+		return true;
+	}
+
+	public boolean isShowing() {
+		return showing<unk><unk><unk><unk><unk><unk>",0,-0.3137238323688507
+<s>Replace a message at a given index,<s>Replace the message at the specified position,0,0.8761781454086304
+<s>Generate output for the CLI based on the content of a file.,<s>Create a new instance of the given class,0,-0.05804537981748581
+<s>Get the transcript object from AssemblyAI,<s>Get the current time in seconds since the epoch,0,-0.06418053805828094
+<s>Update the status of an agent.,<s>Update the status of the given agent,0,0.987086832523346
+<s>Note that this operation is in-place,"<unk>
+		return true;
+	}
+
+	public boolean isShowing() {
+		return<unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.4389665722846985
+<s>Register a component type string to handle a given mimetype.,"<unk>
+    public void testGetSet() {
+<unk><unk><unk><unk><unk><unk><unk>",0,-0.3901967406272888
+<s>Determine if an image is from ECR.,<s>Get the image size from the image URI,0,0.1619054675102234
+<s>Extracts x and y pixel coordinates from a CSS transform string.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.3672073781490326
+<s>Check if Ollama is running and accessible at the given URL.,"<unk>
+
+    def test_get_value_from_type_def",0,-0.1301889419555664
+<s>Count the number of a variable :param variable: a variable :return: the number of a variable,"<unk>
+
+    var data = {
+<unk>
+<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.1628592163324356
+<s>Download a Wikipedia article and store it as a text file.,<s><UNK> to <UNK> to <UNK> to <UNK> to <UNK> to,0,-0.45207130908966064
+<s>Check if the SNS subscription being unsubscribed is from a tagged topic.,<s>Returns true if the user is allowed to access the,0,0.8238900899887085
+<s>Clean up temporary files.,<s>Get the value of the property <UNK>,0,-0.7288826704025269
+<s>Get the usage of tokens and their cost information.,<s>Create a new instance of the given class,0,-0.24580201506614685
+<s>Increments _number_of_llm_calls and enforces the limit.,<s>Get the current time in UTC,0,0.7901091575622559
+<s>Pre-process the LLM request for Gemini 2.0+ models to use the code execution tool.,<s>Create a new <UNK> object with a given <UNK>,0,-0.7031707763671875
+"<s>given TP,DP,PP rank to get the global rank.",<s>Returns the rank of the current thread,0,0.7260679006576538
+<s>Infer the appropriate transport type from the given URL.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.875792384147644
+<s>Load local model with default parameters.,<s>Create a new instance of the given class,0,0.27228647470474243
+<s>Get the current server configuration and status.,"<unk>
+ * @param <T> the type of the element that is stored",0,-0.13168823719024658
+<s>Prints the number of trainable parameters in the model.,<s>Create a list of all the nodes in the graph,0,-0.1613353043794632
+<s>Get emoji for a message type - used only for logging display,"<unk>
+		return true if the input is a valid input",0,0.47761809825897217
+<s>Run the Anthropic agent example.,<s>Create a new instance of the given class,0,0.15184229612350464
+<s>Extracts the first text part from the user message.,<s>Get the current user s session ID,0,0.8151146173477173
+<s>Calculate the cost of the completion using the Bedrock pricing.,<s>Calculate the cost of a given input and output,0,0.9671933054924011
+<s>Get a footnote string for a step log with duration and token information,<s>Create a new instance of the given class,0,-0.18039515614509583
+<s>Cancel current tasks that should be interruptible.,<s>Cancel all tasks that match the given pattern,0,0.9801997542381287
+<s>Compare MD5 hashes for GCS blobs.,<s>Compare the hash of the blob to the current blob,0,0.609097957611084
+<s>Set up logging to capture only LLM calls to a directory.,<s>Create a new logger with a given name,0,0.8441827297210693
+<s>Calculate global rank with support for CP/EP parallelism,<s>Calculate the global rank of a tensor,0,0.9555875062942505
+<s>load model and tokenizer using configuration and local files.,<s>Load a model from a file,0,0.7422195672988892
+<s>Shutdown the exporter by forwarding to the underlying exporter.,<s>Create a new instance of the given class,0,0.19390805065631866
+<s>Returns a string with the object's config and run time state,<s>Get the current time in UTC,0,0.09564465284347534
+<s>Fixture for a mock OperationParser.,"<unk>
+ * @param {string} type The type of the field",0,-0.05929134786128998
+<s>Trim a 511x1x256 tensor to 510x1x256 by removing the row with least impact.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.8395950198173523
+<s>Clear all cached data for all servers.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.5218561887741089
+<s>Wrapper for running SimpleQA benchmark in parallel.,<s>Create a new instance of the given class,0,-0.24695079028606415
+<s>Creates the input template for the LLM.,"<unk>
+
+    def test_get_value_from_array_with_array_type",0,0.015194393694400787
+<s>Convert Hydra configs and other special types to regular Python types.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.2116958498954773
+<s>Save account information to file,<s>Save account information to the database,0,0.9529764652252197
+<s>Load the pipelines for the text classification used for routing.,"<unk>
+    public static void main(String args[]) {<unk><unk><unk><unk><unk><unk><unk>",0,0.07494065165519714
+<s>Load environment variables from set_keys.sh,<s>Load a configuration from a file,0,0.9922354817390442
+<s>List all available MCP servers along with their available tools.,<s>Create a new instance of the given class,0,0.544023334980011
+<s>Create chained .property() commands from properties dict,<s>Create a new instance of the class <UNK> with the,0,0.5307873487472534
+"<s>Replaces the domain (and port, if applicable) of the presigned URL with that of the base URL.",<s>Update the URL of the current browser,0,0.9422726631164551
+<s>Get current memory usage.,<s>Get memory usage information for the current process,0,0.9682363271713257
+<s>Summarize the given text content.,"<unk>
+ * @param <T> the type of the element that is stored in the",0,0.3867759108543396
+<s>Create an AWS session using AWS Profile or default credentials.,<s>Another example of a class <UNK>,0,-0.5173586010932922
+<s>Creates a standardized error response for phue2 operations.,"<s><UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK>
+<UNK><unk>",0,0.26468586921691895
+<s>Create a FastMCP server with a custom route.,"<unk>
+		return false;
+	}
+
+	public boolean isShowing() {
+		return showing;
+<unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.46541720628738403
+<s>Convert to a dict for submission to redis,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.48623523116111755
+<s>hdfs capable to check whether a file_path is exists,"<unk>
+		return true;
+	}
+
+	public boolean isShowing() {
+		return<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.5966781973838806
+<s>Transform an input into an output sequence synchronously.,"<unk>
+ * @param <T> the type of the element that is being checked",0,0.029655635356903076
+<s>Create sample chunks with base64-encoded images,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.49200573563575745
+<s>Generate parameters for each image-filter combination.,<s>Create a new instance of the given class,0,0.17317838966846466
+<s>Returns the token id corresponding to the value of the `language` field,<s>Get the current language,0,0.6443927884101868
+<s>Format search results into context for question generation.,<s>Create a new instance of the given class,0,-0.1643068492412567
+<s>Fixture for common tasks.,"<unk>
+
+    def test_get_value_from_value_type",0,-0.4669889509677887
+<s>Creates an HTML redline doc of differences between text1 and text2.,<s>Create a redux redux store with a redux redux store,0,0.095596082508564
+"<s>When optimizer is None, it is Reference Policy",<s>Constructor for the Actor class,0,0.656819224357605
+<s>Generate audio using specified voice and save to WAV file.,<s><UNK> to <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.263489305973053
+<s>Greet a user with optional title and repetition,"<unk>
+		return false;
+	}
+
+	public boolean is_valid() {
+		return true;
+	}
+
+	public boolean is_valid_type() {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.1920577585697174
+<s>Collate a batch of data.,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.5391635298728943
+<s>Categorize modules by their primary focus.,<s>Create a list of all possible categories,0,0.5546217560768127
+<s>Format a category into a readable string.,"<unk>
+ * @param {string} type The type of the field",0,0.7303200364112854
+<s>Creates a tool call output item from a tool call and its output.,"<unk>
+		return true if the given string is a valid IP address",0,0.05126814544200897
+<s>Enters text into an element with the given ID.,<s>Enter text into a specific element,0,0.960419237613678
+<s>Executed when Gunicorn is shutting down.,"<s><div class=""row"">
+<div class=""col s12 m12 l6"">
+<div class=""row"">
+<div class=""col s12 m6"">
+<div class=""row"">
+<div class=""col s12 m6"">
+<div class=""row"">
+<div class=""col s12 m6"">
+<div class=""row"">
+<div class=""col s12 m6"">
+<div class=""row"">
+<div class=""col s12 m6"">
+<div class=""row"">
+<div class=""col s12 m6",0,-0.5258524417877197
+<s>Add a prompt to the manager.,<s>Add a new prompt,0,0.8580800890922546
+<s>Setup and cleanup the database for each test case.,<s>Create a new session with a new ID,0,0.6131780743598938
+<s>Extract and print the results from the Triton server response.,<s>Create a new instance of the given class,0,-0.44149067997932434
+"<s>given TP,DP,PP rank to get the global rank.",<s>Create a new window with a given title,0,-0.02053779549896717
+<s>Handle decoding any unicode escape sequences embedded in a string (needed to render non-ASCII languages like chinese or arabic in the GIF overlay text),"<s>// Copyright (c) 2012 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that",0,0.07116186618804932
+<s>Check if a given list of numbers are prime.,"<s>// Copyright (c) 2012 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that",0,-0.5882337093353271
+<s>Worker task for each thread,<s><UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.17253200709819794
+<s>Annotate the span with the message content.,<s>Set up a simple <UNK> <UNK> <UNK> <UNK> <UNK>,0,0.21468962728977203
+<s>Load local model with default parameters.,"<unk>
+ * @param <T> the type of the value",0,-0.6925199031829834
+<s>Construct the message sequence for JSON-schema enforcement.,"<unk>
+		return true;
+	}
+
+	public boolean isWifiConnected() {
+		return<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,-0.4058557450771332
+<s>Format the progress event for display.,<s>Test that the <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>,0,-0.13062113523483276
+<s>Track memory usage in MB,"<unk>
+    public void testGetSet() {
+<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.4553959369659424
+<s>Transform the model name in each model_chunk in each pp stage into the name in inference engine,<s>Normalize a model name,0,0.9056034088134766
+<s>Provide feedback based on the output of the code execution,"<unk>
+		return true;
+	}
+
+	public boolean isShow() {
+		return show;
+	}
+
+	public boolean isShow() {<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",0,0.7777063250541687
+<s>Generate debug-friendly string representation,<s>Test that the <UNK> field is correctly set,0,-0.13095705211162567
+<s>Set up the data directory for the application.,<s>Create a new data source,0,0.8444717526435852
+<s>Plays in-memory audio data (NumPy array).,"<s><UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<UNK>
+
+<",0,0.2297920286655426
+<s>Creates empty str for non-initialized states.,"<unk>
+		return true if the input is valid",0,-0.35652124881744385
+<s>Display quality metrics in test context,<s>Create a new instance of the given class,0,-0.374931663274765
+"<s>Returns a RequestContext object containing the DB session, the validated API key ID, and the project ID.",<s>Get the current request context,0,0.9616392254829407
+"<s>Creates a new SSE server transport, which will direct the client to POST messages to the relative or absolute URL given.","<unk>
+ * @param <T> the type of the element that is being checked",0,-0.3266121745109558
+<s>evaluate the similarity between prediction and gold #TODO,<s>Get the value of the field field,0,0.2648213505744934
+<s>Get markdown export for a specific research,<s>Get a report from a given <UNK>,0,0.6892596483230591
+<s>Post initialization hook to set the inference URL from settings.,"<unk>
+ * @param {string} value The value to be set",0,-0.5532581210136414
+<s>Connect to the Blender addon socket server,<s>Get the current time as a string,0,0.2424924224615097
+<s>Appends dimensions to the end of a tensor until it has target_dims dimensions.,"<unk>
+ * @param <T> the type of the value",0,-0.005047125741839409
+<s>Delete a resource from a research project,<s>Get the current time as a string,0,-0.355296790599823

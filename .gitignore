@@ -1,0 +1,28 @@
+# 模型权重与 checkpoint
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.h5
+pytorch_model.*
+checkpoints/
+models/
+output/
+runs/
+wandb/
+
+# 数据集
+*.jsonl
+*.json
+*.zip
+*.tar.gz
+data/
+datasets/
+
+# Python 缓存与环境
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
