@@ -18,6 +18,10 @@ Rscript Analysis/table1.R
 Rscript Analysis/table1.R --input /absolute/path/to/human-annotated-dataset-with-metrics.csv
 ```
 
+Strict reproduction uses `Hmisc::redun()`. If installing `Hmisc` is impossible,
+`--use-published-metric-set` runs only the PCA stage with the ten metrics
+reported in the paper; it does not reproduce the metric-selection stage.
+
 当前可执行入口是 `Analysis-SIDE.r`。
 
 默认行为：

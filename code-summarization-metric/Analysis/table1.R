@@ -6,13 +6,17 @@
 parse_args <- function(args) {
   result <- list(
     input = NULL,
-    output_dir = NULL
+    output_dir = NULL,
+    use_published_metric_set = FALSE
   )
 
   index <- 1
   while (index <= length(args)) {
     option <- args[[index]]
-    if (option %in% c("--input", "--output-dir")) {
+    if (option == "--use-published-metric-set") {
+      result$use_published_metric_set <- TRUE
+      index <- index + 1
+    } else if (option %in% c("--input", "--output-dir")) {
       if (index == length(args)) {
         stop(sprintf("Missing value for %s.", option), call. = FALSE)
       }
@@ -128,9 +132,6 @@ repo_root <- normalizePath(file.path(analysis_dir, ".."), mustWork = TRUE)
 input_path <- args$input %||% file.path(repo_root, "Results", "run-on-test", "human-annotated-dataset-with-metrics.csv")
 output_dir <- args$output_dir %||% file.path(repo_root, "Results", "evaluation", "table1")
 
-if (!requireNamespace("Hmisc", quietly = TRUE)) {
-  stop("Table 1 reproduction requires the R package 'Hmisc' for redun().", call. = FALSE)
-}
 if (!file.exists(input_path)) {
   stop(sprintf("Input CSV not found: %s", input_path), call. = FALSE)
 }
@@ -159,9 +160,33 @@ if (nrow(analysis_data) == 0) {
   stop("No complete records remain after applying mid != 0.", call. = FALSE)
 }
 
-formula <- stats::as.formula(paste("~", paste(sprintf("`%s`", evaluation_metrics), collapse = " + ")))
-reduction <- Hmisc::redun(formula, data = analysis_data, r2 = 0.8, nk = 0)
-reduced_metrics <- reduction$In[!is.na(reduction$In)]
+published_reduced_metrics <- c(
+  "BLEU-1", "BERTScore-R", "SentenceBERT_CS", "InferSent_CS", "c_coeff",
+  "ROUGE-1-P", "ROUGE-4-R", "ROUGE-W-R", "CodeT5-plus_CS", "SIDE"
+)
+if (requireNamespace("Hmisc", quietly = TRUE)) {
+  # Hmisc::redun() does not reliably resolve backticked names containing '-'.
+  safe_metric_names <- paste0("metric_", seq_along(evaluation_metrics))
+  selection_data <- analysis_data
+  names(selection_data) <- safe_metric_names
+  formula <- stats::as.formula(paste("~", paste(safe_metric_names, collapse = " + ")))
+  reduction <- Hmisc::redun(formula, data = selection_data, r2 = 0.8, nk = 0)
+  selected_safe_names <- reduction$In[!is.na(reduction$In)]
+  reduced_metrics <- evaluation_metrics[match(selected_safe_names, safe_metric_names)]
+  reduced_metric_source <- "Hmisc::redun(r2 = 0.8, nk = 0)"
+} else if (args$use_published_metric_set) {
+  reduced_metrics <- published_reduced_metrics
+  reduced_metric_source <- "Published Table 1 metric set (Hmisc unavailable)"
+  message("[warn] Hmisc is unavailable; using the 10 metrics selected in the published Table 1.")
+} else {
+  stop(
+    paste(
+      "Strict Table 1 reproduction requires Hmisc::redun().",
+      "Install Hmisc, or explicitly pass --use-published-metric-set to reproduce only the PCA stage."
+    ),
+    call. = FALSE
+  )
+}
 if (length(reduced_metrics) == 0) {
   stop("redun() did not retain any metrics.", call. = FALSE)
 }
@@ -200,6 +225,7 @@ utils::write.csv(comparison, file.path(output_dir, "table1-notebook-vs-reproduce
 writeLines(c(
   sprintf("Input: %s", normalizePath(input_path)),
   sprintf("Rows after mid != 0 and complete-case filtering: %d", nrow(analysis_data)),
+  sprintf("Metric-selection source: %s", reduced_metric_source),
   sprintf("Reduced metrics: %s", paste(reduced_metrics, collapse = ", "))
 ), file.path(output_dir, "table1-run-summary.txt"))
 
