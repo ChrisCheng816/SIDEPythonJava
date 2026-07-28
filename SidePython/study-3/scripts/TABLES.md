@@ -11,6 +11,9 @@ Run with the default replay inputs:
 Rscript study-3/scripts/table2_sidepython.R
 ```
 
+The default inputs and outputs use `2026-04-23-base-hf-side09`. Results are
+written to `evaluation/metrics/table2-sidepython/` under that replay root.
+
 Or choose a replay and output directory explicitly:
 
 ```bash

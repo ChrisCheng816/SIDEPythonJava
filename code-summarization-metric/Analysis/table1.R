@@ -126,7 +126,7 @@ args <- parse_args(commandArgs(trailingOnly = TRUE))
 analysis_dir <- script_path()
 repo_root <- normalizePath(file.path(analysis_dir, ".."), mustWork = TRUE)
 input_path <- args$input %||% file.path(repo_root, "Results", "run-on-test", "human-annotated-dataset-with-metrics.csv")
-output_dir <- args$output_dir %||% file.path(analysis_dir, "output", "table1")
+output_dir <- args$output_dir %||% file.path(repo_root, "Results", "evaluation", "table1")
 
 if (!requireNamespace("Hmisc", quietly = TRUE)) {
   stop("Table 1 reproduction requires the R package 'Hmisc' for redun().", call. = FALSE)

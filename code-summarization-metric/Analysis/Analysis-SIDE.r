@@ -331,7 +331,7 @@ write_table_outputs <- function(table_data, csv_path, tex_path = NULL) {
 args <- commandArgs(trailingOnly = TRUE)
 script_dir <- get_script_dir()
 repo_root <- normalizePath(file.path(script_dir, ".."), mustWork = TRUE)
-output_dir <- file.path(script_dir, "output")
+output_dir <- file.path(repo_root, "Results", "evaluation", "analysis")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 invisible(report_package("MASS", required = TRUE))

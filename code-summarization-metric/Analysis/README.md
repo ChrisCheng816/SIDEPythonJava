@@ -4,7 +4,7 @@
 
 `table1.R` is the focused reproduction entry point for the paper's PCA Table 1.
 It uses the original `redun(..., r2 = 0.8, nk = 0)` selection followed by an
-unscaled PCA, then writes four useful artifacts under `Analysis/output/table1/`:
+unscaled PCA, then writes four useful artifacts under `Results/evaluation/table1/`:
 
 - `table1-notebook-reference.csv`: the legacy values recorded in `Analysis-SIDE.ipynb`.
 - `table1-reproduced.csv` and `table1-reproduced.tex`: the values from the current input data.
@@ -28,7 +28,7 @@ Rscript Analysis/table1.R --input /absolute/path/to/human-annotated-dataset-with
   - `fine-tuning/fine-tuning/train.json`
   - `fine-tuning/fine-tuning/eval.json`
   - `hard-negatives/hard-negatives/`
-- 输出写到 `Analysis/output/`
+- 完整分析（含 replication OR 表）写到 `Results/evaluation/analysis/`
 
 运行方式：
 
