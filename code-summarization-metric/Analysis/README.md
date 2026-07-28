@@ -4,12 +4,11 @@
 
 `table1.R` is the focused reproduction entry point for the paper's PCA Table 1.
 It uses the original `redun(..., r2 = 0.8, nk = 0)` selection followed by an
-unscaled PCA, then writes four useful artifacts under `Results/evaluation/table1/`:
+unscaled PCA, then writes one final artifact under `Results/evaluation/table1/`:
 
-- `table1-notebook-reference.csv`: the legacy values recorded in `Analysis-SIDE.ipynb`.
-- `table1-reproduced.csv` and `table1-reproduced.tex`: the values from the current input data.
-- `table1-notebook-vs-reproduced.csv`: cell-by-cell differences for metrics shared by both tables.
-- `table1-reduced-metrics.csv`: the metrics retained by `Hmisc::redun` for the new run.
+- `table1.csv`: the newly reproduced PCA values for all non-SIDE rows, followed
+  by the notebook's original `SIDE-Java (old)` row and the newly reproduced
+  `SIDE-Java (new)` row.
 
 Run it with the checked-in input or point it at a replacement data file:
 

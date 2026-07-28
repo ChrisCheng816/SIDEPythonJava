@@ -102,6 +102,26 @@ write_latex <- function(table_data, output_path) {
   writeLines(lines, output_path)
 }
 
+build_final_table <- function(reproduced, legacy) {
+  reproduced_without_side <- reproduced[reproduced$Metric != "SIDE", , drop = FALSE]
+  new_side <- reproduced[reproduced$Metric == "SIDE", , drop = FALSE]
+  if (nrow(new_side) != 1) {
+    stop("The reproduced PCA table must contain exactly one SIDE row.", call. = FALSE)
+  }
+  new_side$Metric <- "SIDE-Java (new)"
+
+  old_side <- legacy[legacy$Metric == "SIDE", , drop = FALSE]
+  if (nrow(old_side) != 1) {
+    stop("The notebook reference table must contain exactly one SIDE row.", call. = FALSE)
+  }
+  old_side_aligned <- data.frame(Metric = "SIDE-Java (old)", check.names = FALSE)
+  for (component in names(reproduced)[-1]) {
+    old_side_aligned[[component]] <- if (component %in% names(old_side)) old_side[[component]][[1]] else NA_real_
+  }
+
+  rbind(reproduced_without_side, old_side_aligned, new_side)
+}
+
 legacy_table <- function() {
   metric_names <- c(
     "Proportion of Variance", "Cumulative Proportion", "BLEU-1", "BERTScore-R",
@@ -204,29 +224,12 @@ reproduced <- data.frame(Metric = rownames(reproduced), reproduced, check.names 
 names(reproduced)[-1] <- component_names
 
 legacy <- legacy_table()
-utils::write.csv(legacy, file.path(output_dir, "table1-notebook-reference.csv"), row.names = FALSE)
-utils::write.csv(reproduced, file.path(output_dir, "table1-reproduced.csv"), row.names = FALSE)
-write_latex(reproduced, file.path(output_dir, "table1-reproduced.tex"))
-utils::write.csv(data.frame(Metric = reduced_metrics), file.path(output_dir, "table1-reduced-metrics.csv"), row.names = FALSE)
+final_table <- build_final_table(reproduced, legacy)
+stale_outputs <- file.path(output_dir, c(
+  "table1-notebook-reference.csv", "table1-reproduced.csv", "table1-reproduced.tex",
+  "table1-reduced-metrics.csv", "table1-notebook-vs-reproduced.csv", "table1-run-summary.txt"
+))
+file.remove(stale_outputs[file.exists(stale_outputs)])
+utils::write.csv(final_table, file.path(output_dir, "table1.csv"), row.names = FALSE)
 
-shared_metrics <- intersect(legacy$Metric, reproduced$Metric)
-shared_components <- intersect(names(legacy), names(reproduced))
-shared_components <- setdiff(shared_components, "Metric")
-comparison <- merge(
-  legacy[legacy$Metric %in% shared_metrics, c("Metric", shared_components), drop = FALSE],
-  reproduced[reproduced$Metric %in% shared_metrics, c("Metric", shared_components), drop = FALSE],
-  by = "Metric", suffixes = c("_notebook", "_reproduced")
-)
-for (component in shared_components) {
-  comparison[[paste0(component, "_difference")]] <- comparison[[paste0(component, "_reproduced")]] - comparison[[paste0(component, "_notebook")]]
-}
-utils::write.csv(comparison, file.path(output_dir, "table1-notebook-vs-reproduced.csv"), row.names = FALSE)
-
-writeLines(c(
-  sprintf("Input: %s", normalizePath(input_path)),
-  sprintf("Rows after mid != 0 and complete-case filtering: %d", nrow(analysis_data)),
-  sprintf("Metric-selection source: %s", reduced_metric_source),
-  sprintf("Reduced metrics: %s", paste(reduced_metrics, collapse = ", "))
-), file.path(output_dir, "table1-run-summary.txt"))
-
-message(sprintf("[done] Table 1 outputs written to %s", normalizePath(output_dir)))
+message(sprintf("[done] Table 1 written to %s", normalizePath(file.path(output_dir, "table1.csv"))))
