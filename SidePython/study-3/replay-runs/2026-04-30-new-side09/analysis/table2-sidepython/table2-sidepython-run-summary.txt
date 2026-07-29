@@ -1,0 +1,11 @@
+Table 2-style ordinal-logit analysis for SIDEpython
+Predictors are min-max scaled to [0, 5], matching the original analysis.
+The dependent variables are the human 1-5 ratings in the extension data.
+no-side input: /scratch/zcheng06/SideJavaPy/SidePython/study-3/replay-runs/2026-04-30-new-side09/evaluation/500-human-annotation/no-side_500-human-annotation.csv
+no-side / Content Adequacy: 500 complete rows; omitted predictors: ROUGE-4-R
+no-side / Conciseness: 500 complete rows; omitted predictors: ROUGE-4-R
+no-side / Fluency: 500 complete rows; omitted predictors: ROUGE-4-R
+with-side input: /scratch/zcheng06/SideJavaPy/SidePython/study-3/replay-runs/2026-04-30-new-side09/evaluation/500-human-annotation/with-side-threshold-0_9_500-human-annotation.csv
+with-side / Content Adequacy: 500 complete rows; omitted predictors: ROUGE-4-R
+with-side / Conciseness: 500 complete rows; omitted predictors: ROUGE-4-R
+with-side / Fluency: 500 complete rows; omitted predictors: ROUGE-4-R

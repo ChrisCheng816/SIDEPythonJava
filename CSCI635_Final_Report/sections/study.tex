@@ -1,0 +1,230 @@
+\section{Study Design}
+
+The study is designed as a two-stage empirical workflow. The first stage reproduces the original Java SIDE setting and establishes whether the metric remains associated with human judgments under a local rerun. The second stage adapts the same idea to Python and evaluates whether SIDE can also serve as a data-filtering signal for training a code summarization model. The overall design therefore separates metric replication from metric-driven data selection.
+
+\subsection{Data Sources}
+
+The replication stage uses the Java resources released with the original SIDE study~\cite{mastropaolo2024evaluating}. Following the original setup, SIDE is trained on CodeSearchNet Java code-summary pairs~\cite{husain2019codesearchnet}, with 100{,}000 training triplets and 10{,}000 validation triplets. The released artifact also provides the trained Java metric and the human-judgment benchmark. Before analysis, we downloaded the dataset, introduced missing dependencies, standardized the environment, and verified that the statistical workflow runs end to end.
+
+The extension stage uses Python code-summary data from CodeSearchNet and the CodeXGLUE code-to-text benchmark~\cite{husain2019codesearchnet,lu2021codexglue,yin2018mining}. For Python SIDE training, we construct contrastive triplets from 200{,}000 Python training pairs. For the downstream filtering experiment, we use the FunCom-style Python split~\cite{leclair2019recommendations,leclair2019neural}, with 250{,}000 training, 10{,}000 validation, and 10{,}000 test instances. Table~\ref{tab:data_filtering_audit} reports the data audit and SIDE filtering result. Since no malformed or empty records were found, the reduction comes from semantic filtering rather than data repair.
+
+\begin{table}[t]
+\centering
+\caption{Data audit and SIDE filtering statistics for the Python extension.}
+\label{tab:data_filtering_audit}
+\small
+\begin{tabular}{lrrrr}
+\hline
+\textbf{Split} & \textbf{Original} & \textbf{Retained} & \textbf{Rejected} & \textbf{Rate} \\
+\hline
+Training & 250,000 & 17,137 & 232,863 & 6.85\% \\
+Validation & 10,000 & 575 & 9,425 & 5.75\% \\
+\hline
+Total & 260,000 & 17,712 & 242,288 & 6.81\% \\
+\hline
+\end{tabular}
+\end{table}
+
+The filtering threshold is 0.9. In the training split, SIDE retains 17,137 out of 250,000 examples, leaving 6.85\% of the original training data. Across the two splits, 17,712 out of 260,000 examples are retained, corresponding to an overall retention rate of 6.81\%. We then sample the same number of unfiltered examples as a size-matched control group, so the comparison isolates semantic filtering from training-set size. The same audit and filtering procedure is applied to the validation split; the final evaluation uses a separate human-annotated test set of 500 examples.
+
+\subsection{SIDE-Based Filtering and Control Construction}
+
+Filtering changes both data quality and data quantity. To avoid attributing improvements merely to a smaller training set, we construct a size-matched control condition. The control data is sampled from the unfiltered FunCom Python training set using a fixed random seed 42, and it contains the same number of examples as the SIDE-filtered set. This creates two comparable training conditions:
+
+\[
+D_{\text{control}} \subset D_{\text{raw}},
+\qquad
+|D_{\text{control}}| = |D_{\text{SIDE}}|.
+\]
+
+The comparison therefore isolates the effect of semantic filtering while holding training-set size constant.
+
+
+\subsection{SIDE Metric Training}
+
+SIDE is trained as a contrastive semantic alignment metric. Each training example is constructed as a triplet consisting of a code fragment, its matched ground-truth summary, and a randomly selected mismatched summary. The code fragment serves as the anchor, the corresponding ground-truth summary is treated as the positive example, and the randomly sampled summary is used as the negative example. Through this contrastive objective, the model learns an embedding space in which semantically aligned code-summary pairs are pulled closer together, while mismatched code-summary pairs are pushed farther apart.
+
+For a code fragment \(c\), positive summary \(s^{+}\), and negative summary \(s^{-}\), the triplet loss is:
+
+\[
+\mathcal{L}_{\text{SIDE}}
+=
+\max\left(
+d(f(c), f(s^{+}))
+-
+d(f(c), f(s^{-}))
++
+m,
+0
+\right),
+\]
+
+where \(f(\cdot)\) is the encoder, \(d(\cdot,\cdot)\) is the embedding distance, and \(m\) is the margin. The loss encourages the distance between the code and the positive summary to be smaller than the distance between the code and the negative summary.
+
+The Java part follows the original SIDE setup and uses the recovered Java resources to reproduce the metric scoring and human-judgment analysis. The Python part trains a new SIDE model for Python code-summary pairs. The Python metric uses the same triplet-learning principle, but the triplets are constructed from Python functions and Python documentation while the negative summary samples within these triplets are drawn from other code-summary pairs.
+
+After training, the SIDE score for a code-summary pair is computed as cosine similarity in the learned embedding space:
+
+\[
+\operatorname{SIDE}(c,s)
+=
+\frac{f(c) \cdot f(s)}
+{\|f(c)\| \|f(s)\|}.
+\]
+
+A higher score indicates stronger semantic alignment between the code and the summary.
+
+\subsection{CodeT5+ Training Design}
+
+CodeT5+ is used as the downstream summarization model. We train the same model architecture under two conditions: one model is trained on the size-matched unfiltered control data, and the other is trained on the SIDE-filtered data. The training, validation, and inference settings are kept consistent across both conditions.
+
+The model is trained with the standard sequence-to-sequence objective. Given code \(c\) and target summary tokens \(y_1,\ldots,y_T\), the training loss is:
+
+\[
+\mathcal{L}_{\text{sum}}
+=
+-\sum_{t=1}^{T}
+\log p(y_t \mid y_{<t}, c).
+\]
+
+This objective teaches the model to generate the reference summary token by token from the input code. During validation, the model with the lowest validation loss is selected. Early stopping is used to prevent overfitting when validation performance stops improving.
+
+\subsection{Inference and Metric Evaluation}
+
+After training, both CodeT5+ models generate summaries for the same human-annotated 500 test samples. The generated summaries are evaluated with BLEU-4, ROUGE-L, METEOR, ChrF, and TF-IDF cosine similarity. These metrics compare generated summaries with reference summaries from different lexical, character-level, and vector-space perspectives.
+
+In addition to average scores, we compute the relationship between SIDE and the other metrics using Spearman rank correlation:
+
+\[
+\rho =
+\operatorname{corr}
+\left(
+\operatorname{rank}(x),
+\operatorname{rank}(y)
+\right).
+\]
+
+This is important because the extension does not only ask whether filtering increases average scores. It also asks whether SIDE-filtered training makes semantic alignment more consistently reflected in other evaluation signals.
+
+\subsection{LLM-as-a-Judge Prompt Design}
+
+To complement the automatic metrics, we use an LLM judge to evaluate whether each generated Python summary is faithful, concise, and fluent. The judge receives only the Python code and the generated summary. It is explicitly instructed not to compare the generated summary against a reference summary, because the goal is to evaluate code-summary alignment directly rather than reference overlap.
+
+Figure~\ref{fig:llm_judge_prompt_full} shows the structured prompt used for this evaluation. The system message defines the judge as an expert evaluator for Python code summarization and requires valid JSON output. The user message provides a rubric for three dimensions: content adequacy, conciseness, and fluency. Each dimension is scored from 1 to 5. The final judge score is computed as the average of the three component scores:
+
+\[
+S_{\text{LLM}}
+=
+\frac{
+S_{\text{content}}
++
+S_{\text{conciseness}}
++
+S_{\text{fluency}}
+}{3}.
+\]
+
+This design makes the LLM evaluation reproducible and parseable. It also separates different quality dimensions: content adequacy captures faithfulness to the code, conciseness captures unnecessary verbosity, and fluency captures grammar and readability.
+
+
+\begin{center}
+\begin{tcolorbox}[
+    breakable,
+    colback=white,
+    colframe=black,
+    title=LLM-as-a-Judge Prompt Structure,
+    fonttitle=\bfseries
+]
+\textbf{System Prompt:} \\
+\quad "You are an expert evaluator for Python code summarization.\\[1mm]
+\quad Your task is to judge a generated natural-language summary for the given Python code.\\[1mm]
+\quad Score Content Adequacy, Conciseness, and Fluency separately on a 1--5 scale.\\[1mm]
+\quad Return only valid JSON."\\[1mm]
+
+\hfill\tcbox[colframe = black, colback = white, colupper = black, fontupper=\large, nobeforeafter, left=1mm, right=1mm, top=0.5mm, bottom=0.5mm]{System}
+
+\textbf{Instruction:} \\
+\quad "Evaluate the generated summary for the Python code below.\\[1mm]
+\quad Score each dimension from 1 to 5.\\[1mm]
+
+\quad \textbf{Content Adequacy:}\\
+\quad 1: Incorrect or mostly unrelated to the code.\\
+\quad 2: Mentions a small part of the code but misses the main behavior or includes major errors.\\
+\quad 3: Partially correct, but incomplete, vague, or contains some misleading details.\\
+\quad 4: Mostly correct and useful, with only minor omissions or imprecision.\\
+\quad 5: Accurate, faithful, and useful. It captures the main purpose and behavior without needing every minor detail.\\[1mm]
+
+\quad \textbf{Conciseness:}\\
+\quad 1: Very verbose, redundant, or filled with irrelevant details.\\
+\quad 2: Overly long or includes several unnecessary details.\\
+\quad 3: Acceptable length but could be more focused.\\
+\quad 4: Mostly concise with only minor extra wording.\\
+\quad 5: Clear and compact with no unnecessary detail.\\[1mm]
+
+\quad \textbf{Fluency:}\\
+\quad 1: Hard to understand due to grammar, wording, or structure.\\
+\quad 2: Understandable only with effort; awkward or error-prone wording.\\
+\quad 3: Mostly understandable, but with noticeable grammar or phrasing issues.\\
+\quad 4: Clear and natural with only minor wording issues.\\
+\quad 5: Fluent, grammatical, and easy to read.\\[1mm]
+
+% \quad Important constraints: judge only the generated summary against the code; do not use any reference or ground-truth summary; reward summaries that correctly capture the main purpose and behavior; penalize hallucinated behavior, overly generic summaries, unnecessary verbosity, and readability issues.\\[1mm]
+
+\quad Python code:\\
+\quad \{PYTHON CODE\}\\[1mm]
+
+\quad Generated summary:\\
+\quad \{GENERATED SUMMARY\}"\\[1mm]
+
+\hfill\tcbox[colframe = black, colback = white, colupper = black, fontupper=\large, nobeforeafter, left=1mm, right=1mm, top=0.5mm, bottom=0.5mm]{User}
+
+\textbf{Answer:} \\
+\quad Return exactly this JSON object and nothing else:\\[1mm]
+\quad \{\\[1mm]
+\quad \quad "content\_adequacy": integer from 1 to 5,\\[1mm]
+\quad \quad "conciseness": integer from 1 to 5,\\[1mm]
+\quad \quad "fluency": integer from 1 to 5,\\[1mm]
+\quad \quad "reason": "one short sentence"\\[1mm]
+\quad \}\\[1mm]
+
+\hfill\tcbox[colframe = black, colback = white, colupper = black, fontupper=\large, nobeforeafter, left=1mm, right=1mm, top=0.5mm, bottom=0.5mm]{Assistant}
+% \caption{Pseudocode-like representation of the structured LLM-as-a-judge prompt used to evaluate generated Python summaries.}
+% \label{fig:llm_judge_prompt}
+\end{tcolorbox}
+\captionof{figure}{Complete LLM-as-a-judge prompt.}
+\label{fig:llm_judge_prompt_full}
+\end{center}
+
+\subsection{Robust JSON Recovery for LLM Outputs}
+
+LLM-generated structured outputs may deviate from strict JSON syntax, for example by using single quotes, omitting quotes around keys, leaving trailing commas, or producing incomplete braces. Such formatting errors can cause standard JSON parsing to fail and interrupt the evaluation pipeline. To reduce this failure mode, we adopt \textit{json\_repair}\footnote{\url{https://github.com/mangiucugna/json_repair}}, a lightweight library for repairing invalid JSON-like strings often produced by language models. The repaired string is then passed to the standard JSON parser for downstream processing.
+
+In the evaluation pipeline, each model output is first normalized into a single JSON-like string and then repaired before parsing. After recovery, a strict schema is enforced by extracting only the expected fields: \texttt{content\_adequacy}, \texttt{conciseness}, \texttt{fluency}, and \texttt{reason}. The three score fields must be integers from 1 to 5, while \texttt{reason} is treated as a short textual explanation. If a field is missing or has an invalid type, a safe fallback value is assigned and the case is logged for inspection. This design prevents minor formatting errors from causing sample loss while preserving deterministic evaluation behavior.
+
+\subsection{Output Diagnostics}
+
+Output diagnostics are used to measure generation stability. For each condition, we compute the average summary length, the range of generated summary lengths, and the rate of empty summaries. These diagnostics are important because a model can sometimes achieve nonzero automatic scores while still producing outputs that are too short, empty, or unstable.
+
+The empty-summary rate is computed as:
+
+\[
+R_{\text{empty}}
+=
+\frac{
+N_{\text{empty}}
+}{
+N_{\text{total}}
+}
+\times 100\%.
+\]
+
+\subsection{Training and Inference Configuration}
+SIDE-py is trained as a sentence-embedding model initialized from \texttt{microsoft/mpnet-base}. The encoder uses a maximum sequence length of 512 and mean pooling over token representations. Training uses shuffled mini-batches of 16, a maximum of 10 epochs, a 10\% warmup schedule, and early stopping with patience 5. Model selection is based on the validation triplet margin, computed as
+\[
+\cos(q,p)-\cos(q,n),
+\]
+where \(q\), \(p\), and \(n\) denote the query, positive, and negative embeddings, respectively.
+
+For CodeT5+ summarization, the source sequence is the tokenized Python code, and the target sequence is the reference docstring. We truncate or pad encoder inputs to 512 tokens and decoder outputs to 128 tokens. Training uses AdamW with learning rate \(2\times10^{-5}\), epsilon \(10^{-8}\), gradient clipping with maximum norm 1.0, and a linear learning-rate schedule with 20\% warmup. The maximum number of epochs is 15, with early stopping patience of 3 based on validation loss. The effective training batch size is 16, implemented with micro-batch size 4 and gradient accumulation over 4 steps.
+
+At inference time, CodeT5+ decoding is deterministic: it uses greedy generation with beam size 1, no sampling, and a maximum output length of 128 tokens. The SIDE-filtered and control models therefore differ only in the training data they receive, while sharing the same model architecture, optimization procedure, and decoding configuration.

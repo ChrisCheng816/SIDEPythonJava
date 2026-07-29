@@ -1,0 +1,156 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+%Template version as of 6/27/2024
+\newcommand{\etal}{\textit{et al.}}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{balance}
+\usepackage[most]{tcolorbox}
+\usepackage{caption}
+\usepackage{multirow}
+
+
+% \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Replicating and Extending SIDE for Code Summary Evaluation and Data Filtering\\}
+
+\author{\IEEEauthorblockN{Zaiyu Cheng}
+\IEEEauthorblockA{\textit{Department of Computer Science} \\
+\textit{The College of William and Mary}\\
+Williamsburg, VA \\
+zcheng06@wm.edu}
+% \and
+% \IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
+% \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+% \textit{name of organization (of Aff.)}\\
+% City, Country \\
+% email address or ORCID}
+}
+\maketitle
+
+\begin{abstract}
+Modern code summarization systems are commonly evaluated with reference-based metrics that measure lexical or surface-level similarity between a generated summary and a reference comment. This evaluation assumption is fragile: repository comments may be incomplete or outdated, and a generated summary may describe the code correctly even when it uses different words from the reference. This paper studies SIDE, a semantic metric that scores the alignment between a code fragment and a natural-language summary directly. The work has two parts. First, we replicate the original Java study by recovering the experimental artifact, rebuilding the required environment and data dependencies, and rerunning the human-judgment analysis. The reproduced analysis preserves the central claim of the original work: higher SIDE scores are positively associated with better human ratings across overall quality, content adequacy, conciseness, and fluency. Second, it has extended the idea to Python by training a Python-specific SIDE metric with code, good-summary, and bad-summary triplets, using the trained metric to filter a Python code-summary training set, and comparing a summarization model trained on filtered data against a size-matched unfiltered control. The extension shows that SIDE-based filtering improves both average evaluation scores and the monotonic relationship between SIDE and other quality measures. It also reduces unstable generation behavior, including very short and empty summaries. The results indicate that SIDE can serve as both a code-summary evaluation metric and a filtering signal for constructing higher-alignment summarization training data. The framework is available at GitHub\footnote{\url{https://github.com/ChrisCheng816/SidePython}}.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Artificial Intelligence for Software Engineering, CodeT5, Code Summarization
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+Automatic code summarization aims to generate short natural-language descriptions of program behavior~\cite{haiduc2010use,sridhara2010towards,mcburney2014automatic,allamanis2016convolutional,iyer2016summarizing,leclair2019neural}. These summaries can support code search, program comprehension, documentation maintenance, and onboarding~\cite{husain2019codesearchnet,lu2021codexglue}. Because manually evaluating generated summaries is expensive, most empirical work relies on automatic metrics that compare a generated summary with a reference comment~\cite{roy2021reassessing,shi2022evaluation,mastropaolo2024evaluating}. Such metrics are convenient and reproducible, but they encode a narrow assumption: a good generated summary should look like the available reference~\cite{papineni2002bleu,lin2004rouge,banerjee2005meteor,popovic2015chrf,zhang2019bertscore}.
+
+That assumption is often weak in software repositories. Reference comments may be stale, incomplete, overly generic, or only loosely connected to the current implementation~\cite{roy2021reassessing,shi2022evaluation,mastropaolo2024evaluating}. At the same time, two summaries can use different wording while expressing the same behavior~\cite{zhang2019bertscore,ren2020codebleu,eghbali2022crystalbleu}. A metric based mainly on token overlap may therefore penalize a faithful generated summary simply because it is phrased differently from the reference~\cite{papineni2002bleu,lin2004rouge,banerjee2005meteor}. This problem motivates evaluation methods that consider the relationship between the code and the summary directly, rather than treating the reference comment as the only source of truth~\cite{mastropaolo2024evaluating}.
+
+The SIDE metric addresses this issue by measuring semantic alignment between code and natural language~\cite{mastropaolo2024evaluating}. Instead of only comparing a generated summary to a reference, SIDE represents code and summaries in a shared embedding space and assigns higher scores when a summary is closer to the code it describes. The original Java study trained this representation with contrastive triplets consisting of code, a suitable summary, and an unsuitable summary, following the general principle of triplet-loss representation learning~\cite{schroff2015facenet,song2020mpnet}. It then evaluated whether the resulting metric was associated with human judgments of summary quality. The key scientific claim is that code-aware semantic alignment provides information that is not fully captured by lexical overlap metrics~\cite{roy2021reassessing,shi2022evaluation,mastropaolo2024evaluating}.
+
+This report first performs a replication of the Java study. The goal of the replication is not to redesign the metric, but to determine whether the original artifact can be recovered and whether the main empirical conclusion still holds when the analysis is rerun locally. After restoring the required data, model assets, execution environment, and statistical workflow, we rerun the human-judgment analysis on the valid annotated examples used for the regression study. The replicated results are reported as odds ratios so they can be compared directly with the original paper.
+
+The second part extends SIDE to Python. We train a Python-specific version of the metric using triplets composed of code, a semantically aligned summary, and a mismatched summary. We then use the trained metric to filter a Python code-summary training set with a high semantic-alignment threshold. The filtered subset retains 17,137 training instances, which is about 6.85\% of the training data. To isolate the effect of semantic filtering from the effect of training-set size, we also create an unfiltered control group with the same number of examples. A CodeT5+(770M) model is trained separately under the unfiltered and SIDE-filtered conditions, then evaluated on generated summaries using standard automatic metrics and an LLM-based judge (GPT-5.3) with scores from 1 to 5~\cite{feng2020codebert,guo2020graphcodebert,guo2021unixcoder,wang2021codet5,wang2023codet5,liu2023geval,zheng2023judging,wang2024large}.
+
+This design turns SIDE from only an evaluation metric into a data-centric filtering signal. If SIDE filtering merely removes data without improving training quality, the filtered model should not consistently outperform the size-matched control. If the metric identifies higher-quality code-summary pairs, however, the filtered condition should produce better summaries and show stronger agreement between SIDE and other quality indicators. The extension results support the latter interpretation: SIDE filtering improves average scores, strengthens the monotonic relationship between SIDE and other metrics, and reduces short or empty generations.
+
+The paper makes three contributions: 
+
+\begin{itemize}
+    \item It documents a replication of the original Java SIDE analysis and provides reproduced odds-ratio results for comparison with the original study.
+    \item It adapts the SIDE training and scoring workflow to Python code summarization.
+    \item It evaluates SIDE-based filtering as a training-data selection strategy, showing that semantic filtering can improve both summary quality and the stability of model outputs.
+\end{itemize}
+
+
+\section{Background and Related Work}
+
+Automatic evaluation for code summarization can be grouped into several metric families. The first family is lexical overlap metrics, which compare a generated summary with a reference summary by counting shared words or phrases. These metrics are simple, fast, and widely used, but they mainly reward surface similarity. In code summarization, this means that a correct summary may receive a low score if it describes the same behavior with different wording.
+
+Papineni \etal~\cite{papineni2002bleu} introduced BLEU, which measures n-gram precision between generated text and reference text. BLEU is widely used because it is easy to compute and allows direct comparison across experiments, but it is sensitive to wording differences and often underestimates semantically correct paraphrases.
+
+Lin~\cite{lin2004rouge} proposed ROUGE for summarization evaluation. ROUGE includes variants based on n-gram overlap and longest common subsequence, making it useful for measuring how much reference content appears in a generated summary. However, like BLEU, it depends strongly on the reference text and does not directly evaluate whether a summary is faithful to the code.
+
+Banerjee and Lavie~\cite{banerjee2005meteor} introduced METEOR, which improves over strict n-gram matching by using unigram alignment, stemming, synonym matching, and a penalty for fragmented word order. METEOR is often more flexible than BLEU, but it still treats the reference summary as the main evaluation target.
+
+Another group of metrics measures character-level or vector-space similarity. Character-level metrics can be more robust to small lexical variations, while vector-space methods estimate similarity using sparse or dense representations. These metrics partially reduce the brittleness of exact word matching, but many of them still evaluate summary quality through comparison with a reference rather than direct grounding in the source code.
+
+Popovi{\'c}~\cite{popovic2015chrf} proposed ChrF, a character n-gram F-score metric originally designed for machine translation evaluation. ChrF can capture partial word overlap and is less brittle than word-level n-gram metrics in some settings. In code summarization, it can reward summaries that share meaningful character-level patterns with the reference, but it still remains reference-based.
+
+Ramos~\cite{ramos2003using} described TF-IDF as a weighting scheme for representing documents according to term importance. TF-IDF cosine similarity has been used as a lightweight semantic baseline because it compares summaries in a vector space rather than through exact ordered n-grams. However, it remains limited because it does not model deep semantic equivalence or code behavior.
+
+Embedding-based metrics form a third family. Instead of counting exact token overlap, they use learned representations to estimate semantic similarity between generated and reference summaries. These metrics are better at handling paraphrases, but when used in the standard reference-based setting, they can still inherit the weaknesses of noisy or incomplete reference comments.
+
+Zhang \etal~\cite{zhang2019bertscore} proposed BERTScore, which compares generated and reference text using contextual token embeddings. BERTScore improves semantic matching over purely lexical metrics because it can recognize similarity between different surface forms. Nevertheless, it still evaluates the generated summary against a reference summary rather than against the code itself~\cite{guo2022unixcoder}.
+
+Feng \etal~\cite{feng2020codebert,guo2021graphcodebert} introduced CodeBERT, a pre-trained model for programming and natural languages. CodeBERT demonstrated that joint representations of code and natural language can support tasks such as code search, documentation generation, and code understanding. This line of work supports the broader idea that code-summary evaluation can benefit from learned cross-modal representations.
+
+Wang \etal~\cite{wang2021codet5} proposed CodeT5, an encoder-decoder model designed for code understanding and generation. CodeT5 uses code-aware pre-training objectives and has been applied to code summarization tasks~\cite{choi2021learning,gao2021sgtrans,tang2022asttrans,shido2019treelstm}. In this paper, it serves as the summarization model used to compare training on unfiltered data with training on semantically filtered data.
+
+Some metrics are designed specifically for software artifacts. These metrics recognize that code has structure and semantics that are not captured well by general natural-language metrics. Although many code-aware metrics focus on generated code rather than generated summaries, they show why software engineering tasks often require evaluation methods beyond standard text overlap.
+
+Ren \etal~\cite{ren2020codebleu} introduced CodeBLEU, which combines lexical similarity with code-specific syntactic and semantic information. While CodeBLEU targets code generation rather than natural-language code summarization, it is important because it shows that program structure should be considered during evaluation.
+
+Eghbali and Pradel~\cite{eghbali2022crystalbleu} proposed CrystalBLEU, a code similarity metric that removes common and uninformative n-grams before computing BLEU-style similarity. Their work shows that frequent tokens and common programming patterns can inflate overlap scores without representing meaningful similarity.
+
+The metric studied in this report belongs to the family of code-summary alignment metrics. Instead of only comparing a generated summary with a reference, this type of metric asks whether the summary is semantically aligned with the code. This is especially useful when the available reference is noisy or when multiple valid summaries describe the same behavior differently.
+
+Schroff \etal~\cite{schroff2015facenet} introduced triplet-loss learning for constructing embedding spaces where similar examples are close and dissimilar examples are farther apart. SIDE follows this general learning principle by using code as the anchor, a suitable summary as the positive example, and an unsuitable summary as the negative example.
+
+Song \etal~\cite{song2020mpnet} introduced MPNet, a pre-trained language model that combines masked and permuted language modeling objectives. MPNet provides strong sentence-level representations and is suitable for training semantic similarity models such as SIDE.
+
+A final evaluation family uses large language models as judges. Instead of computing similarity with a fixed formula, an LLM judge evaluates whether a generated summary is faithful, useful, and concise. This can provide a more flexible quality signal, but LLM-based evaluation may also introduce bias, inconsistency, or model-specific preferences. Therefore, it is best used as complementary evidence alongside automatic metrics.
+
+Liu \etal~\cite{liu2023geval} proposed G-Eval, which uses large language models to evaluate natural-language generation with structured criteria. Their results showed that LLM-based evaluation can align well with human judgments in some settings.
+
+Zheng \etal~\cite{zheng2023judging} studied LLM-as-a-judge evaluation and showed that large language models can provide scalable judgments for generated outputs. At the same time, their work highlights the need to interpret such judgments carefully. In this paper, the LLM judge is used as an additional evaluation signal rather than as the sole measure of summary quality.
+
+\section{Preliminaries}
+
+\subsection{MPNet Encoder}
+
+MPNet is a pre-trained language model that combines masked language modeling and permuted language modeling to learn strong contextual representations~\cite{song2020mpnet}. Its design allows it to model bidirectional context while also learning dependency information from permuted token orders, making it effective for sentence-level semantic representation.
+
+In this work, MPNet is used as the encoder backbone for learning code-summary alignment. Given a code fragment and a natural-language summary, the encoder maps both inputs into a shared semantic space. The resulting representations allow the metric to compare whether a summary is semantically close to the code it describes, rather than only whether it overlaps with a reference summary.
+
+\subsection{CodeT5+ Summarization Model}
+CodeT5+ is a family of code-focused encoder-decoder models designed for code understanding and generation tasks~\cite{wang2023codet5plus}. It extends the CodeT5 line of models with flexible encoder-decoder components and pre-training objectives that support tasks such as code generation, code completion, text-to-code retrieval, and code summarization.
+
+In this project, CodeT5+ with 770M parameters serves as the downstream code summarization model. The model is trained under two conditions: one using an unfiltered training set and one using a SIDE-filtered training set. This setup allows the experiment to test whether semantic filtering improves the quality and stability of generated Python summaries.
+
+\subsection{Contrastive Learning}
+Contrastive learning trains a representation space by pulling semantically related examples closer together and pushing unrelated examples farther apart. A common form is triplet learning, where each training example contains an anchor, a positive example, and a negative example~\cite{schroff2015facenet}. The model is optimized so that the anchor is closer to the positive example than to the negative example by a margin.
+
+In this work, the anchor is the code fragment, the positive example is a suitable summary, and the negative example is an unsuitable summary. This training objective teaches the metric to distinguish summaries that are semantically aligned with the code from summaries that are not. After training, the learned embedding space is used to score code-summary pairs and to filter training data according to semantic alignment.
+
+\input{sections/method}
+\input{sections/study}
+\input{sections/results}
+
+\section{Threats to Validity}
+
+\textbf{Construct validity:} The study uses automatic metrics and an LLM judge as proxies for code summary quality. BLEU-4, ROUGE-L, METEOR, ChrF, and TF-IDF cosine measure different forms of reference similarity, but none of them fully captures whether a summary is useful to a developer. SIDE measures semantic alignment between code and summary, but it is still a learned metric and may prefer summaries that resemble its training distribution. The LLM judge provides an additional quality signal, but its scores may reflect model-specific preferences rather than true human judgment.
+
+\textbf{Internal validity:} The replication results may be affected by artifact recovery decisions, dependency versions, and local execution settings. Although the reproduced SIDE results follow the same statistical workflow as the original study, small differences in restored resources or package behavior can affect coefficient estimates. For the Python extension, performance differences may be influenced by data preprocessing, filtering threshold choice, random sampling of the control group, and training variance. The filtering threshold of 0.9 is interpretable as a high-alignment cutoff, but different thresholds may produce different tradeoffs between data quality and data quantity.
+
+\textbf{Conclusion validity:} The extension reports point estimates for metric scores, correlations, and output diagnostics. The metric improvements are consistent across the reported table, but the magnitude of improvement differs across metrics. In particular, some metrics show larger gains than others, suggesting that SIDE filtering may improve certain aspects of summary quality more strongly than others. The LLM judge result should also be interpreted as supporting evidence rather than definitive proof.
+
+\textbf{External validity:} The replication focuses on the original Java setting, while the extension focuses on Python code summarization. The findings may not generalize to other programming languages, datasets, model families, or documentation styles. The Python extension uses a specific summarization model and a specific SIDE-filtered training setup, so results may differ for larger models, different encoder-decoder architectures, or alternative data selection strategies.
+
+\section{Conclusion}
+
+This paper reproduces and extends SIDE, a semantic metric for code-summary alignment. The replication recovers the Java artifact and reruns the ordered logistic regression analysis on the human-judgment benchmark. The reproduced SIDE results remain statistically significant across overall direct assessment, content adequacy, conciseness, and fluency, preserving the main conclusion of the original study.
+
+The extension adapts SIDE to Python and evaluates it as a data-centric filtering signal. After training a Python-specific SIDE metric, we use it to filter Python code-summary training data and compare a SIDE-filtered training condition against a size-matched unfiltered control. The results show that SIDE filtering improves average scores across BLEU-4, ROUGE-L, METEOR, ChrF, TF-IDF cosine, and the GPT-5.3 judge. It also increases Spearman correlations between SIDE and every other reported metric, suggesting that the filtered model produces summaries whose quality rankings are more consistent across evaluation signals.
+
+Output diagnostics provide additional evidence that SIDE filtering affects generation behavior rather than only metric scores. The filtered model produces fewer empty summaries and a more stable length distribution. These findings suggest that SIDE can be used not only as an evaluation metric, but also as a high-alignment data selection signal for code summarization.
+\newpage
+\balance
+\bibliography{IEEEfull}
+\bibliographystyle{IEEEtran}
+\end{document}
