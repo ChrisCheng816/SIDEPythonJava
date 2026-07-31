@@ -90,7 +90,13 @@ fit_polr <- function(model_data, target, predictors, standardized = FALSE) {
   probabilities <- cumsum(response_counts)[-length(response_counts)] / sum(response_counts)
   start <- c(rep(0, length(predictors)), stats::qlogis(pmin(pmax(probabilities, 1e-6), 1 - 1e-6)))
   formula <- stats::as.formula(paste(sprintf("`%s`", target), "~", paste(sprintf("`%s`", predictors), collapse = " + ")))
-  model <- MASS::polr(formula, data = fitted, Hess = TRUE, start = start)
+  model <- MASS::polr(
+    formula,
+    data = fitted,
+    Hess = TRUE,
+    start = start,
+    control = list(maxit = 10000, reltol = 1e-12)
+  )
   estimates <- stats::coef(model)[predictors]
   errors <- sqrt(diag(stats::vcov(model)))[predictors]
   z_values <- estimates / errors
