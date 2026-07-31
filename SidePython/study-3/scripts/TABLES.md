@@ -7,6 +7,12 @@ automatic metrics are fitted together, so SIDEpython's odds ratio and p-value
 represent its contribution after controlling for the other metrics. It writes
 one publication `.tex` file and its matching CSV summary.
 
+All predictors are z-scored before fitting, making each odds ratio a one
+standard-deviation effect that is comparable across metric rows. P-values are
+Benjamini--Hochberg adjusted within each response model. If ROUGE-4-R has a
+sparse zero/non-zero pattern for one response, the script excludes it only
+from that response model to avoid quasi-separation and records the omission.
+
 The input must be the original human-annotation CSV after every non-SIDE metric
 has been recomputed and SIDEpython has been scored. Do not use a CSV where
 `codeComment` was replaced by a no-SIDE or SIDE-filtered model prediction,
@@ -33,3 +39,14 @@ Rscript study-3/scripts/table2_sidepython.R \
 ```
 
 The output has no per-condition or per-dimension `.tex` files.
+
+## Table 3: SIDEpython PCA
+
+`table2_sidepython.R` also creates Table 3 in the same run. It uses the same
+nine predictors as the corrected Table 2 model (ROUGE-4-R excluded) after
+z-scoring, which is equivalent to PCA on their correlation matrix.
+
+```bash
+Rscript study-3/scripts/table2_sidepython.R \
+  --input /path/to/human-annotation_with_fresh_side.csv
+```
