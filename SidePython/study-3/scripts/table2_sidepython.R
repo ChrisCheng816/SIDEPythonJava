@@ -122,6 +122,7 @@ fit_ordered_logit <- function(data, target_label, target_column, requested_predi
   model_data <- data[, c(target_column, available_predictors), drop = FALSE]
   model_data[] <- lapply(model_data, function(column) suppressWarnings(as.numeric(column)))
   model_data <- stats::na.omit(model_data)
+  model_data <- model_data[apply(model_data, 1, function(row) all(is.finite(row))), , drop = FALSE]
   if (nrow(model_data) == 0) {
     stop(sprintf("No complete cases are available for %s.", target_label), call. = FALSE)
   }
@@ -139,6 +140,22 @@ fit_ordered_logit <- function(data, target_label, target_column, requested_predi
 
   for (metric in available_predictors) {
     model_data[[metric]] <- scale_to_five(model_data[[metric]])
+  }
+  # polr cannot initialize a rank-deficient design matrix. Keep the first
+  # independent predictors in the declared Table 2 order and report any that
+  # are exact linear dependencies as omitted controls.
+  safe_predictor_names <- paste0("metric_", seq_along(available_predictors))
+  design_data <- model_data[, available_predictors, drop = FALSE]
+  names(design_data) <- safe_predictor_names
+  design <- stats::model.matrix(~ ., data = design_data)
+  design_rank <- qr(design)$rank
+  independent_columns <- qr(design)$pivot[seq_len(design_rank)]
+  independent_safe_names <- setdiff(colnames(design)[independent_columns], "(Intercept)")
+  independent_predictors <- available_predictors[match(independent_safe_names, safe_predictor_names)]
+  dropped_dependent <- setdiff(available_predictors, independent_predictors)
+  available_predictors <- independent_predictors
+  if (length(available_predictors) == 0) {
+    stop(sprintf("All predictors are linearly dependent for %s.", target_label), call. = FALSE)
   }
   model_data[[target_column]] <- ordered(round(model_data[[target_column]]))
   if (length(levels(model_data[[target_column]])) < 2) {
@@ -166,7 +183,7 @@ fit_ordered_logit <- function(data, target_label, target_column, requested_predi
   list(
     table = table,
     rows = nrow(model_data),
-    omitted = c(omitted_predictors, dropped_constant)
+    omitted = c(omitted_predictors, dropped_constant, dropped_dependent)
   )
 }
 
