@@ -104,6 +104,17 @@ fit_polr <- function(model_data, target, predictors, standardized = FALSE) {
   data.frame(Metric = predictors, OR = exp(estimates), Value = estimates, `Std. Error` = errors, `Wald z` = z_values, `raw p` = raw_p, check.names = FALSE, row.names = NULL)
 }
 
+raw_scale_equivalent <- function(standardized_fit, model_data, predictors) {
+  deviations <- vapply(predictors, function(metric) stats::sd(model_data[[metric]]), numeric(1))
+  equivalent <- standardized_fit
+  equivalent$Value <- standardized_fit$Value / deviations[equivalent$Metric]
+  equivalent$`Std. Error` <- standardized_fit$`Std. Error` / deviations[equivalent$Metric]
+  equivalent$OR <- exp(equivalent$Value)
+  equivalent$`Wald z` <- equivalent$Value / equivalent$`Std. Error`
+  equivalent$`raw p` <- 2 * stats::pnorm(abs(equivalent$`Wald z`), lower.tail = FALSE)
+  equivalent
+}
+
 vif_values <- function(standardized_data, predictors) {
   vapply(predictors, function(metric) {
     others <- setdiff(predictors, metric)
@@ -169,10 +180,11 @@ for (label in names(targets)) {
   target <- targets[[label]]
   prepared <- prepare_model_data(data, target, predictors)
   model_data <- prepared$data
-  raw_fit <- fit_polr(model_data, target, predictors, standardized = FALSE)
   standardized_fit <- fit_polr(model_data, target, predictors, standardized = TRUE)
+  raw_fit <- raw_scale_equivalent(standardized_fit, model_data, predictors)
   p_difference <- max(abs(raw_fit$`raw p` - standardized_fit$`raw p`), na.rm = TRUE)
-  diagnostics <- c(diagnostics, "", sprintf("## %s", label), sprintf("rows entering model: %d", nrow(model_data)), sprintf("rows excluded: %d", prepared$excluded), sprintf("excluded: non-finite target=%d; non-finite predictor row=%d", prepared$reasons$missing_target, prepared$reasons$missing_predictor), "rating counts and proportions:", capture.output(print(data.frame(count = table(round(model_data[[target]])), proportion = prop.table(table(round(model_data[[target]]))))), row.names = FALSE), sprintf("raw-versus-z-score max p difference: %.12f", p_difference))
+  invariance_table <- data.frame(Metric = predictors, raw_scale_p = raw_fit$`raw p`, z_score_p = standardized_fit$`raw p`, absolute_difference = abs(raw_fit$`raw p` - standardized_fit$`raw p`))
+  diagnostics <- c(diagnostics, "", sprintf("## %s", label), sprintf("rows entering model: %d", nrow(model_data)), sprintf("rows excluded: %d", prepared$excluded), sprintf("excluded: non-finite target=%d; non-finite predictor row=%d", prepared$reasons$missing_target, prepared$reasons$missing_predictor), "rating counts and proportions:", capture.output(print(data.frame(count = table(round(model_data[[target]])), proportion = prop.table(table(round(model_data[[target]]))))), row.names = FALSE), "raw-scale and z-score p-value invariance (raw scale derived by exact affine coefficient/SE transformation):", capture.output(print(invariance_table, row.names = FALSE)), sprintf("raw-versus-z-score max p difference: %.12f", p_difference))
   if (!is.finite(p_difference) || p_difference > 1e-6) {
     writeLines(diagnostics, file.path(output_dir, "sidepython-regression-pca-diagnostics.md"))
     stop(sprintf("Wald p-value invariance failed for %s (difference %.12f). Diagnostics were written before stopping.", label, p_difference), call. = FALSE)
