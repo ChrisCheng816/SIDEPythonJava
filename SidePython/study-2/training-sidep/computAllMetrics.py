@@ -12,7 +12,6 @@ from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from bert_score import score
 from sentence_transformers import SentenceTransformer, util
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-from infersent.models import InferSent
 import nltk
 nltk.download('punkt', quiet=True)
 
@@ -242,11 +241,12 @@ def infersent_encoding_final(dataframe):
             print(f"  Sample scores: {non_zero_scores[:5]}")
         
     except ImportError as e:
-        print(f"InferSent import failed: {e}")
-        dataframe['InferSent_CS'] = [0.0] * len(dataframe)
+        raise RuntimeError(
+            "InferSent is required for a full Table 2 metric recomputation. "
+            "Install the local `infersent` package and provide its encoder and GloVe assets."
+        ) from e
     except Exception as e:
-        print(f"InferSent setup failed: {e}")
-        dataframe['InferSent_CS'] = [0.0] * len(dataframe)
+        raise RuntimeError("InferSent metric recomputation failed.") from e
     
     return dataframe
 

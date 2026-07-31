@@ -48,6 +48,38 @@ normalize_columns <- function(data) {
   data
 }
 
+rouge_n_recall <- function(reference, candidate, n = 4L) {
+  tokens <- function(text) {
+    values <- unlist(strsplit(tolower(trimws(as.character(text))), "\\s+"))
+    values[nzchar(values)]
+  }
+  ref_tokens <- tokens(reference)
+  candidate_tokens <- tokens(candidate)
+  if (length(ref_tokens) < n || length(candidate_tokens) < n) return(0)
+  ngrams <- function(values) {
+    vapply(seq_len(length(values) - n + 1L), function(index) {
+      paste(values[index:(index + n - 1L)], collapse = " ")
+    }, character(1))
+  }
+  ref_counts <- table(ngrams(ref_tokens))
+  candidate_counts <- table(ngrams(candidate_tokens))
+  shared <- intersect(names(ref_counts), names(candidate_counts))
+  if (length(shared) == 0) return(0)
+  sum(pmin(ref_counts[shared], candidate_counts[shared])) / sum(ref_counts)
+}
+
+ensure_rouge_4_recall <- function(data) {
+  if ("ROUGE-4-R" %in% names(data)) return(data)
+  required <- c("originalComment", "codeComment")
+  missing <- setdiff(required, names(data))
+  if (length(missing) > 0) {
+    stop(sprintf("Cannot compute ROUGE-4-R; input is missing: %s", paste(missing, collapse = ", ")), call. = FALSE)
+  }
+  message("[info] ROUGE-4-R is absent; computing 4-gram recall from originalComment and codeComment.")
+  data[["ROUGE-4-R"]] <- mapply(rouge_n_recall, data[["originalComment"]], data[["codeComment"]])
+  data
+}
+
 normalize_java_columns <- function(data) {
   aliases <- c(
     "jaccard" = "Jaccard", "bleu-A" = "BLEU-A", "bleu-1" = "BLEU-1", "bleu-2" = "BLEU-2",
@@ -267,8 +299,8 @@ summary_lines <- c(
   "All predictors are min-max scaled to [0, 5], matching each response scale."
 )
 
-data <- normalize_columns(utils::read.csv(input_path, check.names = FALSE))
-missing <- setdiff(c("codeComment", predictors, unname(unlist(targets))), names(data))
+data <- ensure_rouge_4_recall(normalize_columns(utils::read.csv(input_path, check.names = FALSE)))
+missing <- setdiff(c("codeComment", "SIDEpython", unname(unlist(targets))), names(data))
 if (length(missing) > 0) {
   stop(sprintf("Input is missing: %s", paste(missing, collapse = ", ")), call. = FALSE)
 }

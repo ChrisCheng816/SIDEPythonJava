@@ -12,6 +12,9 @@ has been recomputed and SIDEpython has been scored. Do not use a CSV where
 `codeComment` was replaced by a no-SIDE or SIDE-filtered model prediction,
 because its human labels rate a different text.
 
+If the input lacks `ROUGE-4-R`, the script computes its 4-gram recall directly
+from `originalComment` and `codeComment` before fitting the model.
+
 Run with the default replay inputs:
 
 ```bash
