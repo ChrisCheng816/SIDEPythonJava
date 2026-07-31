@@ -1,14 +1,16 @@
 # Reproducible Tables
 
-`table2_sidepython.R` produces the publication Table 2 for SIDEpython only.
+`table2_sidepython.R` produces the publication Table 2 for the Python study.
 It fits one ordered-logit model for each human-rated quality dimension
-(content adequacy, conciseness, and fluency). Each cell reports SIDEpython's
-odds ratio and p-value. It writes one publication `.tex` file and its matching
-CSV summary.
+(content adequacy, conciseness, and fluency). SIDEpython and the other selected
+automatic metrics are fitted together, so SIDEpython's odds ratio and p-value
+represent its contribution after controlling for the other metrics. It writes
+one publication `.tex` file and its matching CSV summary.
 
-The input must be the original human-annotation CSV after SIDEpython has been
-scored. Do not use a CSV where `codeComment` was replaced by a no-SIDE or
-SIDE-filtered model prediction, because its human labels rate a different text.
+The input must be the original human-annotation CSV after every non-SIDE metric
+has been recomputed and SIDEpython has been scored. Do not use a CSV where
+`codeComment` was replaced by a no-SIDE or SIDE-filtered model prediction,
+because its human labels rate a different text.
 
 Run with the default replay inputs:
 

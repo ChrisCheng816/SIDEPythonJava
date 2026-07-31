@@ -248,7 +248,13 @@ if (!requireNamespace("MASS", quietly = TRUE)) {
 if (!file.exists(input_path)) stop(sprintf("Input CSV not found: %s", input_path), call. = FALSE)
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
-predictors <- "SIDEpython"
+# Match the paper's Table 2: SIDEpython is interpreted while controlling for
+# the other selected automatic metrics, all recomputed from the same Python
+# summaries in the input CSV.
+predictors <- c(
+  "BLEU-1", "BERTScore-R", "SentenceBERT_CS", "InferSent_CS", "ROUGE-1-P",
+  "ROUGE-4-R", "ROUGE-W-R", "c_coeff", "CodeT5-plus_CS", "SIDEpython"
+)
 targets <- list(
   "Content Adequacy" = "human_content_adequacy",
   "Conciseness" = "human_conciseness",
@@ -258,7 +264,7 @@ summary_lines <- c(
   "Table 2 ordered-logit analysis for SIDEpython",
   sprintf("Input: %s", normalizePath(input_path)),
   "Responses: human content adequacy, conciseness, and fluency (ordinal 1-5).",
-  "SIDEpython is min-max scaled to [0, 5], matching each response scale."
+  "All predictors are min-max scaled to [0, 5], matching each response scale."
 )
 
 data <- normalize_columns(utils::read.csv(input_path, check.names = FALSE))
