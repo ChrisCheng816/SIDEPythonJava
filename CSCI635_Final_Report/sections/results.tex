@@ -41,7 +41,7 @@ The Python extension evaluates whether SIDE filtering improves downstream code s
 
 \begin{table*}[t]
 \centering
-\caption{SIDEpython ordered-logistic regression against human ratings. Each cell reports the odds ratio for a one-standard-deviation predictor increase and its Benjamini--Hochberg-adjusted $p$-value; the human-rated 1--5 quality dimension is the response.}
+\caption{SIDEpython ordered-logistic regression against human ratings. Each cell reports an odds ratio and its unadjusted Wald $p$-value; predictors are min--max scaled to the 0--5 response range, matching the Java SIDE analysis. Overall is the mean of the three available human ratings, not a separately collected Overall DA Score.}
 \label{tab:sidepython_regression}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
@@ -52,7 +52,7 @@ The Python extension evaluates whether SIDE filtering improves downstream code s
 
 \begin{table*}[t]
 \centering
-\caption{PCA of the nine standardized Python evaluation metrics.}
+\caption{Unscaled PCA of the nine Python evaluation metrics.}
 \label{tab:sidepython_pca}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
