@@ -167,7 +167,15 @@ fit_ordered_logit <- function(data, target_label, target_column, requested_predi
     "~",
     paste(sprintf("`%s`", available_predictors), collapse = " + ")
   ))
-  model <- MASS::polr(formula, data = model_data, Hess = TRUE)
+  # MASS::polr() initializes through a binary glm by default.  Sparse ordinal
+  # rating distributions can make that initializer separate perfectly, even
+  # when the ordered-logit likelihood itself is finite.  Start instead at zero
+  # metric effects and empirical cumulative-logit thresholds.
+  response_counts <- table(model_data[[target_column]])
+  cumulative_probabilities <- cumsum(response_counts)[-length(response_counts)] / sum(response_counts)
+  cumulative_probabilities <- pmin(pmax(cumulative_probabilities, 1e-6), 1 - 1e-6)
+  start_values <- c(rep(0, length(available_predictors)), stats::qlogis(cumulative_probabilities))
+  model <- MASS::polr(formula, data = model_data, Hess = TRUE, start = start_values)
   coefficients <- coef(summary(model))[seq_along(available_predictors), , drop = FALSE]
   p_values <- 2 * stats::pnorm(abs(coefficients[, "t value"]), lower.tail = FALSE)
   table <- data.frame(
