@@ -1,17 +1,18 @@
 #!/usr/bin/env Rscript
 
-# Produces Table 2-style ordered-logit results for the Python SIDE metric.
-# The two inputs are intentionally kept separate: they represent the model
-# trained without SIDE filtering and the model trained after SIDE filtering.
+# Produces the publication Table 2 ordered-logit results for SIDEpython.
+# The input must contain human ratings for the same code summaries scored by
+# SIDEpython; it must not be a CSV whose codeComment values were replaced by a
+# later model's predictions.
 
 `%||%` <- function(left, right) if (is.null(left)) right else left
 
 parse_args <- function(args) {
-  result <- list(no_side = NULL, with_side = NULL, output_dir = NULL)
+  result <- list(input = NULL, output_dir = NULL)
   index <- 1
   while (index <= length(args)) {
     option <- args[[index]]
-    if (option %in% c("--no-side", "--with-side", "--output-dir")) {
+    if (option %in% c("--input", "--output-dir")) {
       if (index == length(args)) stop(sprintf("Missing value for %s.", option), call. = FALSE)
       key <- sub("^--", "", gsub("-", "_", option))
       result[[key]] <- args[[index + 1]]
@@ -238,77 +239,52 @@ args <- parse_args(commandArgs(trailingOnly = TRUE))
 scripts_dir <- script_dir()
 study_dir <- normalizePath(file.path(scripts_dir, ".."), mustWork = TRUE)
 default_run_root <- file.path(study_dir, "replay-runs", "2026-04-23-base-hf-side09")
-no_side_path <- args$no_side %||% file.path(default_run_root, "evaluation", "metrics", "no-side", "no-side_500-human-annotation_with_fresh_side.csv")
-with_side_path <- args$with_side %||% file.path(default_run_root, "evaluation", "metrics", "with-side-threshold-0_9", "with-side-threshold-0_9_500-human-annotation_with_fresh_side.csv")
+input_path <- args$input %||% file.path(default_run_root, "evaluation", "metrics", "table2-sidepython", "human-annotation_with_fresh_side.csv")
 output_dir <- args$output_dir %||% file.path(default_run_root, "evaluation", "metrics", "table2-sidepython")
 
 if (!requireNamespace("MASS", quietly = TRUE)) {
   stop("This script requires the R package 'MASS' for polr().", call. = FALSE)
 }
-if (!requireNamespace("Hmisc", quietly = TRUE)) {
-  stop("This script requires the R package 'Hmisc' to reproduce the SIDE-Java regression metric set.", call. = FALSE)
-}
-for (input_path in c(no_side_path, with_side_path)) {
-  if (!file.exists(input_path)) stop(sprintf("Input CSV not found: %s", input_path), call. = FALSE)
-}
+if (!file.exists(input_path)) stop(sprintf("Input CSV not found: %s", input_path), call. = FALSE)
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
-project_root <- normalizePath(file.path(scripts_dir, "..", "..", ".."), mustWork = TRUE)
-java_input <- file.path(project_root, "code-summarization-metric", "Results", "run-on-test", "human-annotated-dataset-with-metrics.csv")
-if (!file.exists(java_input)) stop(sprintf("Java replication input not found: %s", java_input), call. = FALSE)
 
-# The full predictor set remains in each model as controls. Only the three
-# code-summary alignment metrics below are emitted in the publication table.
-predictors <- c(
-  "BLEU-1", "BERTScore-R", "SentenceBERT_CS", "InferSent_CS", "ROUGE-1-P",
-  "ROUGE-4-R", "ROUGE-W-R", "c_coeff", "CodeT5-plus_CS", "SIDEpython"
-)
+predictors <- "SIDEpython"
 targets <- list(
   "Content Adequacy" = "human_content_adequacy",
   "Conciseness" = "human_conciseness",
   "Fluency" = "human_fluency"
 )
-conditions <- list(
-  "no-side" = no_side_path,
-  "with-side" = with_side_path
-)
-all_results <- list()
 summary_lines <- c(
-  "Table 2-style ordinal-logit analysis for SIDEpython",
-  "Predictors are min-max scaled to [0, 5], matching the original analysis.",
-  "The dependent variables are the human 1-5 ratings in the extension data."
+  "Table 2 ordered-logit analysis for SIDEpython",
+  sprintf("Input: %s", normalizePath(input_path)),
+  "Responses: human content adequacy, conciseness, and fluency (ordinal 1-5).",
+  "SIDEpython is min-max scaled to [0, 5], matching each response scale."
 )
 
-for (condition_name in names(conditions)) {
-  data <- normalize_columns(utils::read.csv(conditions[[condition_name]], check.names = FALSE))
-  summary_lines <- c(summary_lines, sprintf("%s input: %s", condition_name, normalizePath(conditions[[condition_name]])))
-
-  for (target_label in names(targets)) {
-    result <- fit_ordered_logit(data, target_label, targets[[target_label]], predictors)
-    file_stem <- sprintf("%s-%s-polr", condition_name, gsub("[^a-z0-9]+", "-", tolower(target_label)))
-    core_rows <- result$table
-    combined <- data.frame(
-      Variant = "SIDEpython",
-      Condition = condition_name,
-      Dimension = target_label,
-      core_rows,
-      check.names = FALSE
-    )
-    utils::write.csv(combined, file.path(output_dir, paste0(file_stem, ".csv")), row.names = FALSE)
-    write_latex(combined, file.path(output_dir, paste0(file_stem, ".tex")))
-    all_results[[length(all_results) + 1]] <- combined
-    summary_lines <- c(
-      summary_lines,
-      sprintf("%s / %s: %d complete rows; omitted predictors: %s",
-        condition_name,
-        target_label,
-        result$rows,
-        if (length(result$omitted) == 0) "none" else paste(result$omitted, collapse = ", ")
-      )
-    )
-  }
+data <- normalize_columns(utils::read.csv(input_path, check.names = FALSE))
+missing <- setdiff(c("codeComment", predictors, unname(unlist(targets))), names(data))
+if (length(missing) > 0) {
+  stop(sprintf("Input is missing: %s", paste(missing, collapse = ", ")), call. = FALSE)
 }
 
-all_results <- c(list(legacy_java_core_metrics(), reproduce_java_core_metrics(java_input)), all_results)
+all_results <- lapply(names(targets), function(target_label) {
+  result <- fit_ordered_logit(data, target_label, targets[[target_label]], predictors)
+  summary_lines <<- c(
+    summary_lines,
+    sprintf("%s: %d complete rows; omitted predictors: %s",
+      target_label,
+      result$rows,
+      if (length(result$omitted) == 0) "none" else paste(result$omitted, collapse = ", ")
+    )
+  )
+  data.frame(
+    Variant = "SIDEpython",
+    Condition = "human-annotated",
+    Dimension = target_label,
+    result$table,
+    check.names = FALSE
+  )
+})
 combined_results <- do.call(rbind, all_results)
 
 format_cell <- function(or_value, p_value) {
@@ -316,7 +292,7 @@ format_cell <- function(or_value, p_value) {
   sprintf("%.4f (%s)", or_value, p_text)
 }
 
-dimensions <- c("Overall DA Score", "Content Adequacy", "Conciseness", "Fluency")
+dimensions <- names(targets)
 combined_results$MetricLabel <- ifelse(
   combined_results$Condition == "not-applicable",
   paste(combined_results$Variant, combined_results$Metric, sep = ": "),
@@ -335,4 +311,4 @@ for (dimension in dimensions) {
 utils::write.csv(wide_results, file.path(output_dir, "table2-regression-summary.csv"), row.names = FALSE)
 write_latex(wide_results, file.path(output_dir, "table2-regression-summary.tex"))
 writeLines(summary_lines, file.path(output_dir, "table2-sidepython-run-summary.txt"))
-message(sprintf("[done] SIDEpython ordinal-logit tables written to %s", normalizePath(output_dir)))
+message(sprintf("[done] SIDEpython Table 2 written to %s", normalizePath(output_dir)))

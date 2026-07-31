@@ -1,13 +1,14 @@
 # Reproducible Tables
 
-`table2_sidepython.R` produces a Table 2-style SIDE-only comparison. It keeps the
-full set of available controls inside each ordered-logit model. The final
-publication table keeps every available metric as a row and uses the four human
-dimensions as columns. Each cell reports only the odds ratio and p-value. The
-Java section contains the legacy and reproduced results; SIDEpython is reported
-separately for the no-SIDE and SIDE-filtered conditions.
+`table2_sidepython.R` produces the publication Table 2 for SIDEpython only.
+It fits one ordered-logit model for each human-rated quality dimension
+(content adequacy, conciseness, and fluency). Each cell reports SIDEpython's
+odds ratio and p-value. It writes one publication `.tex` file and its matching
+CSV summary.
 
-The table must use the condition-specific `*_with_fresh_side.csv` files produced by `run_base_replay.py`, not the copied 500-row annotation CSVs. The replay first replaces `codeComment`, recomputes every non-SIDE predictor, and then adds fresh SIDE scores. This prevents the two conditions from silently sharing source-annotation metrics.
+The input must be the original human-annotation CSV after SIDEpython has been
+scored. Do not use a CSV where `codeComment` was replaced by a no-SIDE or
+SIDE-filtered model prediction, because its human labels rate a different text.
 
 Run with the default replay inputs:
 
@@ -22,9 +23,8 @@ Or choose a replay and output directory explicitly:
 
 ```bash
 Rscript study-3/scripts/table2_sidepython.R \
-  --no-side /path/to/no-side_500-human-annotation_with_fresh_side.csv \
-  --with-side /path/to/with-side_500-human-annotation_with_fresh_side.csv \
-  --output-dir /path/to/table2-sidepython
+  --input /path/to/human-annotation_with_fresh_side.csv \
+  --output-dir /path/to/table2
 ```
 
-`SIDE_score` is normalized to the output label `SIDEpython`. `SIDE_emb` is deliberately not used because it is not the trained Python SIDE score emitted by the project scoring pipeline.
+The output has no per-condition or per-dimension `.tex` files.

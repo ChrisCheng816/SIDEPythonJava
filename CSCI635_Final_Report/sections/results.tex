@@ -32,21 +32,21 @@ SIDE-Java (new) & 0.205 & -0.787 & -0.394 & -0.395 & 0.035 & -0.070 & -0.081 & -
 }
 \end{table*}
 
-The regression comparison is reported with the Python extension in Table~\ref{tab:side_regression_extension}, so that the published Java estimates, the local Java rerun, and the Python metric can be inspected in one place. The reproduced Java SIDE odds ratios remain positive for all four human-judgment dimensions and retain the original study's strong association with content adequacy, conciseness, and fluency. Together with the PCA reconstruction, this provides evidence that the recovered artifact preserves the original analytical behavior rather than reproducing only a single summary statistic.
+Table~\ref{tab:sidepython_regression} reports the ordered-logistic regression for SIDEpython against the human ratings of the same Python summaries. It follows the original paper's Table 2 design: each human quality dimension is the ordinal dependent variable, and the table reports SIDEpython's odds ratio and $p$-value.
 
 
 \subsection{Extension Results}
 
-The Python extension evaluates whether SIDE filtering improves downstream code summarization training. Table~\ref{tab:side_regression_extension} places the original Java analysis, its reproduction, and the Python-side regression estimates in one comparison. Table~\ref{tab:extension_metrics} then compares the two Python training conditions on aggregate quality measures, while Table~\ref{tab:output_diagnostics} reports output-length diagnostics and empty-summary rates. The results are organized around two questions:
+The Python extension evaluates whether SIDE filtering improves downstream code summarization training. Table~\ref{tab:extension_metrics} compares the two Python training conditions on aggregate quality measures, while Table~\ref{tab:output_diagnostics} reports output-length diagnostics and empty-summary rates. Table~\ref{tab:sidepython_regression} separately reports SIDEpython's relationship with human quality ratings. The results are organized around two questions:
 
 \begin{table*}[t]
 \centering
-\caption{Ordered-logistic regression comparison across the original Java SIDE study, the Java reproduction, and Python SIDE. Each cell reports an odds ratio followed by its $p$-value. Python results are reported separately for the no-SIDE and SIDE-filtered training conditions; Overall DA Score is unavailable for the Python annotation protocol.}
-\label{tab:side_regression_extension}
+\caption{SIDEpython ordered-logistic regression against human ratings. Each cell reports an odds ratio followed by its $p$-value; the human-rated 1--5 quality dimension is the response.}
+\label{tab:sidepython_regression}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \resizebox{\textwidth}{!}{%
-\input{sections/table2_regression.tex}%
+\input{../SidePython/study-3/replay-runs/2026-04-23-base-hf-side09/evaluation/metrics/table2-sidepython/table2-regression-summary.tex}%
 }
 \end{table*}
 
