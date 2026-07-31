@@ -72,10 +72,13 @@ This repo also includes a Base-only replay path that:
 - writes all outputs to a fresh replay directory under `study-3/replay-runs/`
 
 Traditional-metrics replay. This trains both CodeT5+ 770m models, runs inference, replaces
-the 500-row annotation CSV `codeComment` values with model predictions, computes fresh SIDE
-with `codeFunctions/codeComment`, attaches those SIDE scores to the inference metrics CSVs,
-and writes BLEU-4, ROUGE-L, METEOR, ChrF, TF-IDF, and Spearman-with-SIDE summaries. The run
-directory is auto-created as `study-3/replay-runs/YYYY-MM-DD-base-hf-side09`.
+the 500-row annotation CSV `codeComment` values with model predictions, recomputes the full
+Table-2 regression predictor set for each condition, and then computes fresh SIDE with
+`codeFunctions/codeComment`. The final condition-specific regression inputs are written as
+`evaluation/metrics/<condition>/*_with_fresh_side.csv`; use these files (not the copied
+annotation CSVs) when generating Table 2. The run also attaches SIDE scores to the inference
+metrics CSVs and writes BLEU-4, ROUGE-L, METEOR, ChrF, TF-IDF, and Spearman-with-SIDE summaries.
+The run directory is auto-created as `study-3/replay-runs/YYYY-MM-DD-base-hf-side09`.
 
 ```bash
 source /home/zcheng06/miniconda3/etc/profile.d/conda.sh

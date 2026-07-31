@@ -1,3 +1,4 @@
+import argparse
 import pandas as pd
 import numpy as np
 import re
@@ -498,14 +499,18 @@ def codet5_plus_encoding(dataframe):
     dataframe['CodeT5-plus_CS'] = similarities
     return dataframe
 
-# ========== Main ==========
-def main():
-    df = pd.read_csv("annotation_All.csv")
-    df = df.rename(columns={
-        "GT_summary": "originalComment", 
-        "generated_summary": "codeComment",
-        "input_code": "codeFunctions"  # Map input_code to codeFunctions
-    })
+# ========== Public entrypoint ==========
+def compute_regression_metrics(dataframe):
+    """Recompute every non-SIDE Table 2 predictor from current predictions."""
+    # Remove both legacy aliases and canonical names. Otherwise the R table
+    # generator normalizes duplicate names and can select a stale source column.
+    stale_metric_columns = [
+        "BLEU_1", "BLEU-1", "ROUGE_1_P", "ROUGE-1-P", "ROUGE_4_R", "ROUGE-4-R",
+        "ROUGE_W_R", "ROUGE-W-R", "BERTScore_R", "BERTScore-R",
+        "SentenceBERT_CS", "InferSent_CS", "C_Coeff", "c_coeff",
+        "CodeT5_plus_CS", "CodeT5-plus_CS",
+    ]
+    df = dataframe.drop(columns=stale_metric_columns, errors="ignore")
 
     print("******************* Computing BLEU-1 SCORES *******************")
     df = indv_bleu_score(df)
@@ -528,8 +533,30 @@ def main():
     print("******************* Computing CodeT5+ SCORES *******************")
     df = codet5_plus_encoding(df)
 
-    df.to_csv("annotation_with_metrics.csv", index=False)
-    print("Saved to 'annotation_with_metrics.csv'")
+    return df
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Recompute the non-SIDE Table 2 metrics from annotation predictions."
+    )
+    parser.add_argument("--input-csv", default="annotation_All.csv")
+    parser.add_argument("--output-csv", default="annotation_with_metrics.csv")
+    args = parser.parse_args()
+
+    df = pd.read_csv(args.input_csv).rename(columns={
+        "GT_summary": "originalComment",
+        "generated_summary": "codeComment",
+        "input_code": "codeFunctions",
+    })
+    required_columns = {"originalComment", "codeComment", "codeFunctions"}
+    missing_columns = required_columns.difference(df.columns)
+    if missing_columns:
+        raise ValueError(f"Missing required input columns: {sorted(missing_columns)}")
+
+    df = compute_regression_metrics(df)
+    df.to_csv(args.output_csv, index=False)
+    print(f"Saved recomputed Table 2 metrics to '{args.output_csv}'")
 
 if __name__ == "__main__":
     main()

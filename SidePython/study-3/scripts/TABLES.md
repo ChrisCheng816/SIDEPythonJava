@@ -7,7 +7,7 @@ dimensions as columns. Each cell reports only the odds ratio and p-value. The
 Java section contains the legacy and reproduced results; SIDEpython is reported
 separately for the no-SIDE and SIDE-filtered conditions.
 
-The checked-in 500-row annotation files provide nine of the ten predictors used in the original Table 2. `ROUGE-4-R` is not present in those files, so the run summary records it as omitted. Supplying a CSV with that column includes it automatically.
+The table must use the condition-specific `*_with_fresh_side.csv` files produced by `run_base_replay.py`, not the copied 500-row annotation CSVs. The replay first replaces `codeComment`, recomputes every non-SIDE predictor, and then adds fresh SIDE scores. This prevents the two conditions from silently sharing source-annotation metrics.
 
 Run with the default replay inputs:
 
@@ -22,8 +22,8 @@ Or choose a replay and output directory explicitly:
 
 ```bash
 Rscript study-3/scripts/table2_sidepython.R \
-  --no-side /path/to/no-side_500-human-annotation.csv \
-  --with-side /path/to/with-side_500-human-annotation.csv \
+  --no-side /path/to/no-side_500-human-annotation_with_fresh_side.csv \
+  --with-side /path/to/with-side_500-human-annotation_with_fresh_side.csv \
   --output-dir /path/to/table2-sidepython
 ```
 

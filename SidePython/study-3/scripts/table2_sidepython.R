@@ -238,8 +238,8 @@ args <- parse_args(commandArgs(trailingOnly = TRUE))
 scripts_dir <- script_dir()
 study_dir <- normalizePath(file.path(scripts_dir, ".."), mustWork = TRUE)
 default_run_root <- file.path(study_dir, "replay-runs", "2026-04-23-base-hf-side09")
-no_side_path <- args$no_side %||% file.path(default_run_root, "evaluation", "500-human-annotation", "no-side_500-human-annotation.csv")
-with_side_path <- args$with_side %||% file.path(default_run_root, "evaluation", "500-human-annotation", "with-side-threshold-0_9_500-human-annotation.csv")
+no_side_path <- args$no_side %||% file.path(default_run_root, "evaluation", "metrics", "no-side", "no-side_500-human-annotation_with_fresh_side.csv")
+with_side_path <- args$with_side %||% file.path(default_run_root, "evaluation", "metrics", "with-side-threshold-0_9", "with-side-threshold-0_9_500-human-annotation_with_fresh_side.csv")
 output_dir <- args$output_dir %||% file.path(default_run_root, "evaluation", "metrics", "table2-sidepython")
 
 if (!requireNamespace("MASS", quietly = TRUE)) {

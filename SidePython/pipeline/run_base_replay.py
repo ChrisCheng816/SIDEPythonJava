@@ -189,6 +189,25 @@ def run_annotation_side(
     )
 
 
+def run_annotation_regression_metrics(
+    python_bin: str,
+    annotation_csv: Path,
+    output_csv: Path,
+) -> None:
+    """Refresh Table 2 predictors after replacing codeComment."""
+    run_cmd(
+        [
+            python_bin,
+            str(REPO_ROOT / "study-2" / "training-sidep" / "computAllMetrics.py"),
+            "--input-csv",
+            str(annotation_csv),
+            "--output-csv",
+            str(output_csv),
+        ],
+        cwd=REPO_ROOT / "study-2" / "training-sidep",
+    )
+
+
 def attach_side_scores(inference_csv: Path, side_csv: Path, output_csv: Path) -> None:
     with inference_csv.open("r", encoding="utf-8", errors="ignore", newline="") as inference_handle:
         inference_reader = csv.DictReader(inference_handle)
@@ -346,6 +365,11 @@ def main() -> None:
     parser.add_argument("--skip-infer-no-side", action="store_true")
     parser.add_argument("--skip-infer-with-side", action="store_true")
     parser.add_argument("--skip-replace-codecomment", action="store_true")
+    parser.add_argument(
+        "--skip-regression-metrics",
+        action="store_true",
+        help="Use existing recomputed annotation metrics instead of regenerating Table 2 predictors.",
+    )
     parser.add_argument("--skip-score-annotation-side", action="store_true")
     parser.add_argument("--skip-llm-judge", action="store_true")
     parser.add_argument("--no-llm-judge-resume", action="store_true")
@@ -401,6 +425,10 @@ def main() -> None:
     annotation_scored_no_side = metrics_no_side / "no-side_500-human-annotation_with_fresh_side.csv"
     annotation_scored_with_side = (
         metrics_with_side / f"with-side-threshold-{threshold_label}_500-human-annotation_with_fresh_side.csv"
+    )
+    annotation_metrics_no_side = metrics_no_side / "no-side_500-human-annotation_with_regression_metrics.csv"
+    annotation_metrics_with_side = (
+        metrics_with_side / f"with-side-threshold-{threshold_label}_500-human-annotation_with_regression_metrics.csv"
     )
     llm_judge_no_side = metrics_no_side / "no-side_500-human-annotation_with_fresh_side_llm_judge.csv"
     llm_judge_with_side = (
@@ -637,13 +665,34 @@ def main() -> None:
                 ]
             )
 
+    if args.eval_mode in {"traditional", "llm"}:
+        required_annotations = []
+        if eval_no_side:
+            required_annotations.append(annotation_no_side)
+        if eval_with_side:
+            required_annotations.append(annotation_with_side)
+        require_files(required_annotations, "annotation CSV with condition-specific predictions")
+        if not args.skip_regression_metrics:
+            if eval_no_side:
+                metrics_no_side.mkdir(parents=True, exist_ok=True)
+                run_annotation_regression_metrics(args.python_bin, annotation_no_side, annotation_metrics_no_side)
+            if eval_with_side:
+                metrics_with_side.mkdir(parents=True, exist_ok=True)
+                run_annotation_regression_metrics(args.python_bin, annotation_with_side, annotation_metrics_with_side)
+
     if args.eval_mode in {"traditional", "llm"} and not args.skip_score_annotation_side:
+        required_regression_metric_csvs = []
+        if eval_no_side:
+            required_regression_metric_csvs.append(annotation_metrics_no_side)
+        if eval_with_side:
+            required_regression_metric_csvs.append(annotation_metrics_with_side)
+        require_files(required_regression_metric_csvs, "recomputed annotation metric CSV")
         if eval_no_side:
             metrics_no_side.mkdir(parents=True, exist_ok=True)
-            run_annotation_side(args.python_bin, annotation_no_side, annotation_scored_no_side, args.side_checkpoint)
+            run_annotation_side(args.python_bin, annotation_metrics_no_side, annotation_scored_no_side, args.side_checkpoint)
         if eval_with_side:
             metrics_with_side.mkdir(parents=True, exist_ok=True)
-            run_annotation_side(args.python_bin, annotation_with_side, annotation_scored_with_side, args.side_checkpoint)
+            run_annotation_side(args.python_bin, annotation_metrics_with_side, annotation_scored_with_side, args.side_checkpoint)
 
     if args.eval_mode in {"traditional", "llm"} and not args.skip_compare_metrics:
         required_side_csvs = []
